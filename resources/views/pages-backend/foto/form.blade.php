@@ -64,7 +64,7 @@
                                             <input id="thumbnail" readonly class="form-control" type="text" name="picture" value="{{($id!=-1 ? $det->picture : '')}}">
                                         </div>
                                         @if($id!=-1)
-                                            <img id="holder" style="margin-top:15px;max-height:100px;" src="{{($id!=-1 ? asset($det->file): '')}}">
+                                            <img id="holder" style="margin-top:15px;max-height:100px;" src="{{($id!=-1 ? asset($det->picture): '')}}">
                                         @endif
                                     </div>
                                 </div>
@@ -104,6 +104,7 @@
     <script src="{{asset('/vendor/laravel-filemanager/js/lfm.js')}}"></script>
     <script>
         $(document).ready(function(){
+            $('#lfm').filemanager('image', {prefix: APP_URL+'/laravel-filemanager'});
             var options = {
                     filebrowserImageBrowseUrl: APP_URL+'/laravel-filemanager?type=Images',
                     filebrowserImageUploadUrl: APP_URL+'/laravel-filemanager/upload?type=Images&_token=',

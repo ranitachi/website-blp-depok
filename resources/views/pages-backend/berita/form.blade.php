@@ -93,7 +93,11 @@
                                                         </span>
                                                         <input id="thumbnail" readonly class="form-control" type="text" name="file" value="{{($id!=-1 ? $det->file : '')}}">
                                                         </div>
-                                                        <img id="holder" style="margin-top:15px;max-height:100px;" src="{{($id!=-1 ? asset($det->file): '')}}">
+                                                        @if($id!=-1) 
+                                                            <img id="holder" style="margin-top:15px;max-height:100px;" src="{{($id!=-1 ? asset($det->file): '')}}">
+                                                        @else
+                                                            <img id="holder" style="margin-top:15px;max-height:100px;">
+                                                        @endif
                                     </div>
                                 </div>
                                

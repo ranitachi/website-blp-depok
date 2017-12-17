@@ -18,7 +18,7 @@
             <li><a href="{{route('dashboard-admin.index')}}" class="{{(strpos($path,'dashboard')!==false ? 'active' : '')}}"><span class="nav-icon-circle">DS</span> Dashboard</a></li>
             <li><a href="{{ URL::to('profil') }}" class="{{(strpos($path,'profil')!==false ? 'active' : '')}}" class=""><span class="nav-icon-circle">PL</span> Profil Lembaga</a></li>
             <li><a href="{{ URL::to('visi-misi') }}" class="{{(strpos($path,'visi-misi')!==false ? 'active' : '')}}" class=""><span class="nav-icon-circle">VM</span> Visi Misi Lembaga</a></li>
-            <li><a href="{{ URL::to('struktur-organisasi') }}" class="{{(strpos($path,'struktur-organisasi')!==false ? 'active' : '')}}" class=""><span class="nav-icon-circle">SO</span> Struktur Orgnisasi</a></li>
+            <li><a href="{{ URL::to('struktur-organisasi') }}" class="{{(strpos($path,'struktur-organisasi')!==false ? 'active' : '')}}" class=""><span class="nav-icon-circle">SO</span> Struktur Organisasi</a></li>
             
             <li class="{{($path=='berita' ? 'open' : (strpos($path,'berita-form')!==false ? 'open' : (strpos($path,'kategori')!==false ? 'open' : '')))}}">
                 <a href="#"><span class="nav-icon-circle">BL</span> Berita Lembaga</a>
@@ -37,6 +37,8 @@
             </li>
 
             <li><a href="{{ URL::to('kontak') }}" class="{{(strpos($path,'kontak')!==false ? 'active' : '')}}" class=""><span class="nav-icon-circle">KL</span> Kontak Lembaga</a></li>
+            
+            <li><a href="{{ URL::to('slider') }}" class="{{(strpos($path,'slider')!==false ? 'active' : '')}}" class=""><span class="nav-icon-circle">SL</span> Slider</a></li>
 
             <li><a href="{{ URL::to('stat') }}" class="{{(strpos($path,'stat')!==false ? 'active' : '')}}" class=""><span class="nav-icon-circle">SK</span> Stat Kunjungan</a></li>
 

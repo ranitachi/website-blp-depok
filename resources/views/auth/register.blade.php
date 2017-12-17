@@ -38,6 +38,20 @@
                                 @endif
                             </div>
                         </div>
+                        <div class="form-group{{ $errors->has('nip') ? ' has-error' : '' }}">
+                            <label for="nip" class="col-md-4 control-label">NIP</label>
+
+                            <div class="col-md-6">
+                                <input id="nip" type="text" class="form-control" name="nip" value="{{ old('nip') }}" required>
+                                <input id="level" type="hidden" class="form-control" name="level" value="0">
+
+                                @if ($errors->has('nip'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('nip') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
 
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label for="password" class="col-md-4 control-label">Password</label>

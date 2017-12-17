@@ -12,12 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    //return view('welcome');
+    return view('auth.login');
 });
 
 Auth::routes();
-
 //Route::get('/home', 'HomeController@index')->name('home');
+
+Route::post('/logout','UserController@performLogout');
 
 Route::get('/dashboard-admin', 'DashboardController@index')->name('dashboard-admin.index');
 
@@ -42,3 +44,9 @@ Route::post('video-status/{id}', 'VideoController@videostatus');
 Route::resource('foto','FotoController');
 Route::get('foto-data/{id}', 'FotoController@data')->name('foto.data');
 Route::post('foto-status/{id}', 'FotoController@fotostatus');
+
+Route::resource('kontak','KontakController');
+Route::get('kontak-data/{id}', 'KontakController@data')->name('kontak.data');
+
+Route::resource('slider','SliderController');
+Route::get('slider-data/{id}', 'SliderController@data')->name('slider.data');
