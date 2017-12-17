@@ -39,7 +39,7 @@
             <!-- END HEADING -->
             
             <div class="block-content">
-                    <form class="form-horizontal" id="form-perusahaan" method="POST" action="{{$id==-1 ? URL::to('foto') : URL::to('foto/'.$id) }}">
+                    <form class="form-horizontal" id="form-foto" method="POST" action="{{$id==-1 ? URL::to('foto') : URL::to('foto/'.$id) }}">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
 									@if ($id!=-1)
 										{{ method_field('PATCH') }}
@@ -64,7 +64,10 @@
                                             <input id="thumbnail" readonly class="form-control" type="text" name="picture" value="{{($id!=-1 ? $det->picture : '')}}">
                                         </div>
                                         @if($id!=-1)
+
                                             <img id="holder" style="margin-top:15px;max-height:100px;" src="{{($id!=-1 ? asset($det->picture): '')}}">
+                                        @else
+                                            <img id="holder" style="margin-top:15px;max-height:100px;">
                                         @endif
                                     </div>
                                 </div>
@@ -77,7 +80,7 @@
                                 <div class="form-group">
                                     <label class="control-label col-lg-2">Flag</label>
                                     <div class="col-lg-2">
-                                        <select class="select2 form-control" name="flag">
+                                        <select class="select2 form-control" name="flag" id="flag">
                                             <option value="-1">-Pilih-</option>
                                             <option value="1" {{$id!=-1 ? ($det->flag=='1' ? 'selected="selected"' : '') : ''}}>Active</option>
                                             <option value="0" {{$id!=-1 ? ($det->flag=='0' ? 'selected="selected"' : '') : ''}}>DeActive</option>
@@ -91,7 +94,7 @@
                                     </div>
                                 </div>
                                 <div class="text-right">
-  									<button type="submit" id="simpanperusahaan" class="btn btn-primary btn-xs btn-shadowed">Simpan <i class="icon-arrow-right14 position-right"></i></button>
+  									<button type="button" id="simpanfoto" class="btn btn-primary btn-xs btn-shadowed">Simpan <i class="icon-arrow-right14 position-right"></i></button>
   								</div>
                 </form>
             </div>
@@ -112,6 +115,48 @@
                     filebrowserUploadUrl: APP_URL+	'/laravel-filemanager/upload?type=Files&_token='
                 };
                 CKEDITOR.replace('desc', options);
+
+                $('#simpanfoto').click(function(){
+                    var title=$('#title').val();
+                    var flag=$('#flag').val();
+                    var thumbnail=$('#thumbnail').val();
+                    var id_kategori=$('#category').val();
+                    var content = CKEDITOR.instances['desc'].getData();
+                    if(title=='')
+                    {
+                        var txt = "Judul Foto Belum Diisi";
+                        $('#modal-primary-ok').html('<h2>'+txt+'</h2>');
+                        $('div#modal-ok').modal('show');
+                    }
+                    else if(thumbnail=='')
+                    {
+                        var txt = "Foto Belum Dipilih";
+                        $('#modal-primary-ok').html('<h2>'+txt+'</h2>');
+                        $('div#modal-ok').modal('show');
+                    }
+                    else if(id_kategori=='')
+                    {
+                        var txt = "Kategori Foto Belum Dipilih";
+                        $('#modal-primary-ok').html('<h2>'+txt+'</h2>');
+                        $('div#modal-ok').modal('show');
+                    }
+                    else if(flag=='-1')
+                    {
+                        var txt = "Status Foto Belum Dipilih";
+                        $('#modal-primary-ok').html('<h2>'+txt+'</h2>');
+                        $('div#modal-ok').modal('show');
+                    }
+                    else if(content!='')
+                    {
+                        $('#form-foto').submit();
+                    }
+                    else
+                    {
+                        var txt = "Keterangan Foto Masih Belum Diisi";
+                        $('#modal-primary-ok').html('<h2>'+txt+'</h2>');
+                        $('div#modal-ok').modal('show');
+                    }
+                });
         });
 
         $.validate({

@@ -39,7 +39,7 @@
             <!-- END HEADING -->
             
             <div class="block-content">
-                    <form class="form-horizontal" id="form-perusahaan" method="POST" action="{{$id==-1 ? URL::to('slider') : URL::to('slider/'.$id) }}">
+                    <form class="form-horizontal" id="form-slider" method="POST" action="{{$id==-1 ? URL::to('slider') : URL::to('slider/'.$id) }}">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
 									@if ($id!=-1)
 										{{ method_field('PATCH') }}
@@ -87,7 +87,7 @@
                                     </div>
                                     </div>
                                 <div class="text-right">
-  									<button type="submit" id="simpanperusahaan" class="btn btn-primary btn-xs btn-shadowed">Simpan <i class="icon-arrow-right14 position-right"></i></button>
+  									<button type="button" id="simpanslider" class="btn btn-primary btn-xs btn-shadowed">Simpan <i class="icon-arrow-right14 position-right"></i></button>
   								</div>
                 </form>
             </div>
@@ -108,6 +108,41 @@
                     filebrowserUploadUrl: APP_URL+	'/laravel-filemanager/upload?type=Files&_token='
                 };
                 CKEDITOR.replace('desc', options);
+
+                $('#simpanslider').click(function(){
+                    var title=$('#title').val();
+                    var flag=$('#flag').val();
+                    var thumbnail=$('#thumbnail').val();
+                    var content = CKEDITOR.instances['desc'].getData();
+                    if(title=='')
+                    {
+                        var txt = "Judul Slider Belum Diisi";
+                        $('#modal-primary-ok').html('<h2>'+txt+'</h2>');
+                        $('div#modal-ok').modal('show');
+                    }
+                    else if(thumbnail=='')
+                    {
+                        var txt = "Data Slider Belum Dipilih";
+                        $('#modal-primary-ok').html('<h2>'+txt+'</h2>');
+                        $('div#modal-ok').modal('show');
+                    }
+                    else if(flag=='-1')
+                    {
+                        var txt = "Status Slider Belum Dipilih";
+                        $('#modal-primary-ok').html('<h2>'+txt+'</h2>');
+                        $('div#modal-ok').modal('show');
+                    }
+                    else if(content!='')
+                    {
+                        $('#form-slider').submit();
+                    }
+                    else
+                    {
+                        var txt = "Keterangan Slider Masih Belum Diisi";
+                        $('#modal-primary-ok').html('<h2>'+txt+'</h2>');
+                        $('div#modal-ok').modal('show');
+                    }
+                });
         });
 
         $.validate({
