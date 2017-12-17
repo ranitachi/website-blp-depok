@@ -741,7 +741,7 @@ var app_demo = {
     },
     settings: function(){
         
-        var box = $("<div></div>").addClass("app-settings")
+        /*var box = $("<div></div>").addClass("app-settings")
             .append($("<div></div>").addClass("app-settings-button").html("<span class=\"icon-magic-wand\"></span>"));
             
         var themesHeaderContainer = $("<div></div>").addClass("app-settings-themes-header").append("<span>Header themes</span>");
@@ -809,7 +809,7 @@ var app_demo = {
         
         $("body").on("click",".app-settings-button",function(){
             $(".app-settings").toggleClass("open");
-        });
+        });*/
     }
 };
 

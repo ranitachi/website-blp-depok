@@ -17,4 +17,28 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/dashboard-admin', 'DashboardController@index')->name('dashboard-admin.index');
+
+Route::resource('struktur-organisasi','ProfilController');
+Route::resource('visi-misi','ProfilController');
+Route::resource('profil','ProfilController');
+Route::get('profil-data/{category}', 'ProfilController@data')->name('profil.data');
+Route::get('profil-form/{id}/{category}', 'ProfilController@show')->name('profil.form');
+
+Route::resource('kategori','KategoriController');
+Route::get('kategori-data/{id}', 'KategoriController@data')->name('kategori.data');
+Route::post('kategori-status/{id}', 'KategoriController@status');
+
+Route::resource('berita','BeritaController');
+Route::get('berita-data/{id}', 'BeritaController@data')->name('berita.data');
+Route::post('berita-status/{id}', 'BeritaController@beritastatus');
+
+Route::resource('video','VideoController');
+Route::get('video-data/{id}', 'VideoController@data')->name('video.data');
+Route::post('video-status/{id}', 'VideoController@videostatus');
+
+Route::resource('foto','FotoController');
+Route::get('foto-data/{id}', 'FotoController@data')->name('foto.data');
+Route::post('foto-status/{id}', 'FotoController@fotostatus');
