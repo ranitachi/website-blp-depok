@@ -65,7 +65,7 @@
                                         <div class="tile-basic">
                                                 <div class="pull-right" style="margin:5px 2px 0 0;">
                                                     <a href="{{URL::to('foto/'.$vv->id)}}" class="btn btn-xs btn-info"><i class="fa fa-edit"></i></a>
-                                                    <a class="btn btn-xs btn-danger"><i class="fa fa-trash"></i></a>
+                                                    <a class="btn btn-xs btn-danger" href="javascript:hapus({{$vv->id}})"><i class="fa fa-trash"></i></a>
                                                 </div>
                                             <a href="#" class="tile-image tile-image-padding tile-image-hover-grayscale preview" data-preview-image="{{asset($vv->picture)}}" data-preview-size="modal-lg">
                                                 <img src="{{asset($thumb)}}" alt="" style="height:180px;">
@@ -156,7 +156,7 @@
                     headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
                     data: {"_token": "{{ csrf_token() }}"}
                 }).done(function(data){
-                    var txt = "Data Video Berhasil Di Hapus";
+                    var txt = "Data Foto Berhasil Di Hapus";
                     noty({
                         text: "<strong>Informasi</strong>"+txt,
                         type: 'information',
@@ -173,7 +173,7 @@
                     loaddata();
 
                 }).fail(function(){
-                    var txt = " Data Video Gagal Di Hapus";
+                    var txt = " Data Foto Gagal Di Hapus";
                     noty({
                         text: "<strong>Informasi</strong>"+txt,
                         type: 'error',

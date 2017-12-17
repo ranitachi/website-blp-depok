@@ -39,7 +39,7 @@
             <!-- END HEADING -->
             
             <div class="block-content">
-                    <form class="form-horizontal" id="form-perusahaan" method="POST" action="{{$id==-1 ? URL::to('kategori') : URL::to('kategori/'.$id) }}">
+                    <form class="form-horizontal" id="form-kategori" method="POST" action="{{$id==-1 ? URL::to('kategori') : URL::to('kategori/'.$id) }}">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
 									@if ($id!=-1)
 										{{ method_field('PATCH') }}
@@ -48,7 +48,7 @@
                                 <div class="form-group">
                                     <label class="control-label col-lg-2">Nama Kategori</label>
                                     <div class="col-lg-10">
-                                        <input type="text" class="form-control" placeholder="Nama Kategori" name="nama_kategori" id="nama_kategori" autocomplete="off" value="{{($id!=-1 ? $det->nama_kategori : '')}}">
+                                        <input type="text" class="form-control" data-validation="required" placeholder="Nama Kategori" name="nama_kategori" id="nama_kategori" autocomplete="off" value="{{($id!=-1 ? $det->nama_kategori : '')}}">
                                     </div>
                                     </div>
                                     
@@ -60,7 +60,7 @@
                                     </div>
                                 
                                 <div class="text-right">
-  									<button type="submit" id="simpanperusahaan" class="btn btn-primary btn-xs btn-shadowed">Simpan <i class="icon-arrow-right14 position-right"></i></button>
+  									<button type="button" id="simpankategori" class="btn btn-primary btn-xs btn-shadowed">Simpan <i class="icon-arrow-right14 position-right"></i></button>
   								</div>
                 </form>
             </div>
@@ -82,6 +82,27 @@
                     filebrowserUploadUrl: APP_URL+	'/laravel-filemanager/upload?type=Files&_token='
                 };
                 CKEDITOR.replace('desc', options);
+
+                $('#simpankategori').click(function(){
+                    var desc=$('#nama_kategori').val();
+                    var content = CKEDITOR.instances['desc'].getData();
+                    if(desc=='')
+                    {
+                        var txt = "Nama Kategori Masih Belum Diisi";
+                        $('#modal-primary-ok').html('<h2>'+txt+'</h2>');
+                        $('div#modal-ok').modal('show');
+                    }
+                    else if(content!='')
+                    {
+                        $('#form-kategori').submit();
+                    }
+                    else
+                    {
+                        var txt = "Keterangan Kategori Masih Belum Diisi";
+                        $('#modal-primary-ok').html('<h2>'+txt+'</h2>');
+                        $('div#modal-ok').modal('show');
+                    }
+                });
         });
 
         $.validate({

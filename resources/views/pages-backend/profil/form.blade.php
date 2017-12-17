@@ -39,7 +39,7 @@
             <!-- END HEADING -->
             
             <div class="block-content">
-                    <form class="form-horizontal" id="form-perusahaan" method="POST" action="{{$id==-1 ? URL::to($cat) : URL::to($cat.'/'.$id) }}">
+                    <form class="form-horizontal" id="form-profil" method="POST" action="{{$id==-1 ? URL::to($cat) : URL::to($cat.'/'.$id) }}">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
 									@if ($id!=-1)
 										{{ method_field('PATCH') }}
@@ -48,19 +48,19 @@
                                 <div class="form-group">
                                     <label class="control-label col-lg-2">Judul {{ucwords($cat)}}</label>
                                     <div class="col-lg-6">
-                                        <input type="text" class="form-control" readonly placeholder="Judul {{ucwords($cat)}}" name="title" id="title" autocomplete="off" value="{{($id!=-1 ? ucwords($det->title) : ucwords($cat))}}">
+                                        <input type="text" class="form-control" data-validation="required" readonly placeholder="Judul {{ucwords($cat)}}" name="title" id="title" autocomplete="off" value="{{($id!=-1 ? ucwords($det->title) : ucwords($cat))}}">
                                     </div>
                                 </div>
                                 <input type="hidden" name="category" value="{{$cat}}">
                                 <div class="form-group">
                                     <label class="control-label col-lg-12">Isi {{ucwords($cat)}}</label>
                                     <div class="col-lg-12">
-                                    <textarea rows="5" cols="5" class="form-control" placeholder="Isi {{ucwords($cat)}}" name="desc" id="desc">{{($id!=-1 ? $det->desc : '')}}</textarea>
+                                    <textarea rows="5" cols="5" class="form-control" data-validation="required" placeholder="Isi {{ucwords($cat)}}" name="desc" id="desc">{{($id!=-1 ? $det->desc : '')}}</textarea>
                                     </div>
                                 </div>
                                 
                                 <div class="text-right">
-  									<button type="submit" id="simpanperusahaan" class="btn btn-primary btn-xs btn-shadowed">Simpan <i class="icon-arrow-right14 position-right"></i></button>
+  									<button type="button" id="simpanprofil" class="btn btn-primary btn-xs btn-shadowed">Simpan <i class="icon-arrow-right14 position-right"></i></button>
   								</div>
                 </form>
             </div>
@@ -82,6 +82,21 @@
                     filebrowserUploadUrl: APP_URL+	'/laravel-filemanager/upload?type=Files&_token='
                 };
                 CKEDITOR.replace('desc', options);
+
+            $('#simpanprofil').click(function(){
+                //var desc=$('#desc').val();
+                var content = CKEDITOR.instances['desc'].getData();
+                if(content!='')
+                {
+                    $('#form-profil').submit();
+                }
+                else
+                {
+                    var txt = "Keterangan Masih Belum Diisi";
+                    $('#modal-primary-ok').html('<h2>'+txt+'</h2>');
+                    $('div#modal-ok').modal('show');
+                }
+            });
         });
 
         $.validate({

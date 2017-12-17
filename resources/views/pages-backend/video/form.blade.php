@@ -48,21 +48,21 @@
                                 <div class="form-group">
                                     <label class="control-label col-lg-4">Nama Video</label>
                                     <div class="col-lg-8">
-                                        <input type="text" class="form-control" placeholder="Nama Video" name="title" id="title" autocomplete="off" value="{{($id!=-1 ? $det->title : '')}}">
+                                        <input type="text" class="form-control"  data-validation="required" placeholder="Nama Video" name="title" id="title" autocomplete="off" value="{{($id!=-1 ? $det->title : '')}}">
                                     </div>
                                     </div>
 
                                     <div class="form-group">
                                     <label class="control-label col-lg-4">URL</label>
                                     <div class="col-lg-8">
-                                        <input type="text" class="form-control" placeholder="URL" name="url" id="url" autocomplete="off" value="{{($id!=-1 ? $det->url : '')}}">
+                                        <input type="text" class="form-control"  data-validation="required" placeholder="URL" name="url" id="url" autocomplete="off" value="{{($id!=-1 ? $det->url : '')}}">
                                     </div>
                                     </div>
                                     <div class="form-group">
                                     <label class="control-label col-lg-4">Flag</label>
                                     <div class="col-lg-2">
-                                        <select class="select2 form-control" name="flag">
-                                            <option value="-1">-Pilih-</option>
+                                        <select class="select2 form-control" name="flag" data-validation="required" >
+                                            <option value="">-Pilih-</option>
                                             <option value="1" {{$id!=-1 ? ($det->flag=='1' ? 'selected="selected"' : '') : ''}}>Active</option>
                                             <option value="0" {{$id!=-1 ? ($det->flag=='0' ? 'selected="selected"' : '') : ''}}>DeActive</option>
                                         </select>

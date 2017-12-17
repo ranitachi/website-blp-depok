@@ -39,7 +39,7 @@
             <!-- END HEADING -->
             
             <div class="block-content">
-                    <form class="form-horizontal" id="form-perusahaan" method="POST" action="{{$id==-1 ? URL::to('berita') : URL::to('berita/'.$id) }}">
+                    <form class="form-horizontal" id="form-berita" method="POST" action="{{$id==-1 ? URL::to('berita') : URL::to('berita/'.$id) }}">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
 									@if ($id!=-1)
 										{{ method_field('PATCH') }}
@@ -54,7 +54,7 @@
                                 <div class="form-group">
                                     <label class="control-label col-lg-2">Kategori</label>
                                     <div class="col-lg-4">
-                                    <select class="select2 form-control" name="id_kategori">
+                                    <select class="select2 form-control" name="id_kategori" id="id_kategori">
                                         <option value="-1">-Pilih-</option>
                                         @foreach ($cat as $k => $v)
                                             @if ($id!=-1)
@@ -71,11 +71,11 @@
                                     </select>
                                     </div>
                                 </div>
-                                <input type="hidden" name="id_user" value="">
+                                <input type="hidden" name="id_user" value="{{Auth::user()->id}}">
                                                     <div class="form-group">
                                                 <label class="control-label col-lg-2">Flag</label>
                                                 <div class="col-lg-2">
-                                                    <select class="select2 form-control" name="flag">
+                                                    <select class="select2 form-control" name="flag" id="flag">
                                                         <option value="-1">-Pilih-</option>
                                                         <option value="1" {{$id!=-1 ? ($det->flag=='1' ? 'selected="selected"' : '') : ''}}>Active</option>
                                                         <option value="0" {{$id!=-1 ? ($det->flag=='0' ? 'selected="selected"' : '') : ''}}>DeActive</option>
@@ -109,7 +109,7 @@
                                 </div>
                                 
                                 <div class="text-right">
-  									<button type="submit" id="simpanperusahaan" class="btn btn-primary btn-xs btn-shadowed">Simpan <i class="icon-arrow-right14 position-right"></i></button>
+  									<button type="button" id="simpanberita" class="btn btn-primary btn-xs btn-shadowed">Simpan <i class="icon-arrow-right14 position-right"></i></button>
   								</div>
                 </form>
             </div>
@@ -131,6 +131,41 @@
                     filebrowserUploadUrl: APP_URL+	'/laravel-filemanager/upload?type=Files&_token='
                 };
                 CKEDITOR.replace('desc', options);
+
+                $('#simpanberita').click(function(){
+                    var title=$('#title').val();
+                    var flag=$('#flag').val();
+                    var id_kategori=$('#id_kategori').val();
+                    var content = CKEDITOR.instances['desc'].getData();
+                    if(title=='')
+                    {
+                        var txt = "Judul Berita Belum Diisi";
+                        $('#modal-primary-ok').html('<h2>'+txt+'</h2>');
+                        $('div#modal-ok').modal('show');
+                    }
+                    else if(id_kategori=='-1')
+                    {
+                        var txt = "Kategori Berita Belum Dipilih";
+                        $('#modal-primary-ok').html('<h2>'+txt+'</h2>');
+                        $('div#modal-ok').modal('show');
+                    }
+                    else if(flag=='-1')
+                    {
+                        var txt = "Status Berita Belum Dipilih";
+                        $('#modal-primary-ok').html('<h2>'+txt+'</h2>');
+                        $('div#modal-ok').modal('show');
+                    }
+                    else if(content!='')
+                    {
+                        $('#form-berita').submit();
+                    }
+                    else
+                    {
+                        var txt = "Isi Berita Masih Belum Diisi";
+                        $('#modal-primary-ok').html('<h2>'+txt+'</h2>');
+                        $('div#modal-ok').modal('show');
+                    }
+                });
         });
 
         $.validate({
