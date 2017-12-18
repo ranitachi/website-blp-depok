@@ -13,7 +13,7 @@
           <div class="col-sm-15"> <span class="ion-ios7-timer icon-news pull-left"></span>
             <ul id="js-news" class="js-hidden">
               @foreach($latestnews as $item)
-                <li class="news-item"><a href="#">{{$item->title}}</a></li>    
+                <li class="news-item"><a href="{{route('front.berita', $item->id)}}">{{$item->title}}</a></li>    
               @endforeach
             </ul>
           </div>
@@ -28,7 +28,7 @@
             <!-- carousel start -->
             <div id="sync1" class="owl-carousel">
               @foreach($slider as $item)
-                <div class="box item"> <a href="#">
+                <div class="box item"> <a>
                 <div class="carousel-caption">
                   @php
                     echo $item->desc;
@@ -145,7 +145,7 @@
                 <div class="row left-bordered">
                   @foreach($latestnews as $i => $item)
                     @if($featuredcategories[1]->id == $item->id_kategori)
-                      <div class="topic col-sm-16"> <a href="#"><img class=" img-thumbnail" src="{{url('/')}}{{$item->file}}" width="600" height="227" alt=""/>
+                      <div class="topic col-sm-16"> <a href="{{route('front.berita', $item->id)}}"><img class=" img-thumbnail" src="{{url('/')}}{{$item->file}}" width="600" height="227" alt=""/>
                         <h3> {{$item->title}}</h3>
                         <div class="text-danger sub-info-bordered ">
                           <div class="time"><span class="ion-android-data icon"></span>Dec 9 2014</div>
@@ -176,7 +176,7 @@
                         @if($featuredcategories[1]->id == $item->id_kategori)
                           @if($flag!=0)
                             @if($limit<2)
-                              <li> <a href="#">
+                              <li> <a href="{{route('front.berita', $item->id)}}">
                               <div class="row">
                                 <div class="col-lg-3 col-md-4 hidden-sm  "><img width="76" height="76" alt="" src="{{url('/')}}{{$item->file}}" class="img-thumbnail pull-left"> </div>
                                 <div class="col-lg-13 col-md-12">
@@ -229,7 +229,7 @@
                   <ul class="list-unstyled">
                     @foreach($latestnews as $i => $item)
                       @if($i<5)
-                      <li> <a href="#">
+                      <li> <a href="{{route('front.berita', $item->id)}}">
                         <div class="row">
                           <div class="col-sm-5 col-md-4"><img class="img-thumbnail pull-left" src="{{url('/')}}{{$item->file}}" width="164" height="152" alt=""/> </div>
                           <div class="col-sm-11 col-md-12">
@@ -249,7 +249,7 @@
                   <ul class="list-unstyled">
                     @foreach($popularnews as $i => $item)
                       @if($i<5)
-                      <li> <a href="#">
+                      <li> <a href="{{route('front.berita', $item->id)}}">
                         <div class="row">
                           <div class="col-sm-5 col-md-4"><img class="img-thumbnail pull-left" src="{{url('/')}}{{$item->file}}" width="164" height="152" alt=""/> </div>
                           <div class="col-sm-11 col-md-12">

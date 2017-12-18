@@ -20,14 +20,14 @@
             <ul class="list-unstyled">
               @foreach($popularnews as $i => $item)
                 @if($i<3)
-                  <li> <a href="#">
+                  <li> <a href="{{route('front.berita', $item->id)}}">
                   <div class="row">
                     <div class="col-sm-4"><img class="img-thumbnail pull-left" src="{{url('/')}}{{$item->file}}" width="70" height="70" alt=""/> </div>
                     <div class="col-sm-12">
                       <h4>{{$item->title}}</h4>
                       <div class="f-sub-info">
                         <div class="time"><span class="ion-android-data icon"></span>Dec 16 2014</div>
-                        <div class="comments"><span class="ion-chatbubbles icon"></span>351</div>
+                        <div class="comments"><span class="ion-chatbubbles icon"></span>{{$item->view}}</div>
                       </div>
                     </div>
                   </div>
@@ -41,14 +41,14 @@
             <ul class="list-unstyled">
               @foreach($latestnews as $i => $item)
                 @if($i<3)
-                  <li> <a href="#">
+                  <li> <a href="{{route('front.berita', $item->id)}}">
                   <div class="row">
                     <div class="col-sm-4"><img class="img-thumbnail pull-left" src="{{url('/')}}{{$item->file}}" width="70" height="70" alt=""/> </div>
                     <div class="col-sm-12">
                       <h4>{{$item->title}}</h4>
                       <div class="f-sub-info">
                         <div class="time"><span class="ion-android-data icon"></span>Dec 16 2014</div>
-                        <div class="comments"><span class="ion-chatbubbles icon"></span>351</div>
+                        <div class="comments"><span class="ion-chatbubbles icon"></span>{{$item->view}}</div>
                       </div>
                     </div>
                   </div>

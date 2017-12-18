@@ -32,7 +32,7 @@
                 <div class="sec-topic col-sm-16 wow fadeInDown animated " data-wow-delay="0.5s">
                 <div class="row">
                     <div class="col-sm-7"><img width="1000" height="606" alt="" src="{{url('/')}}{{$item->file}}" class="img-thumbnail"></div>
-                    <div class="col-sm-9"> <a href="#">
+                    <div class="col-sm-9"> <a href="{{route('front.berita', $item->id)}}">
                     <div class="sec-info">
                         <h3>{{$item->title}}</h3>
                         <div class="text-danger sub-info-bordered">
@@ -78,7 +78,7 @@
                   <ul class="list-unstyled">
                     @foreach($latestnews as $i => $item)
                       @if($i<5)
-                      <li> <a href="#">
+                      <li> <a href="{{route('front.berita', $item->id)}}">
                         <div class="row">
                           <div class="col-sm-5 col-md-4"><img class="img-thumbnail pull-left" src="{{url('/')}}{{$item->file}}" width="164" height="152" alt=""/> </div>
                           <div class="col-sm-11 col-md-12">
@@ -98,7 +98,7 @@
                   <ul class="list-unstyled">
                     @foreach($popularnews as $i => $item)
                       @if($i<5)
-                      <li> <a href="#">
+                      <li> <a href="{{route('front.berita', $item->id)}}">
                         <div class="row">
                           <div class="col-sm-5 col-md-4"><img class="img-thumbnail pull-left" src="{{url('/')}}{{$item->file}}" width="164" height="152" alt=""/> </div>
                           <div class="col-sm-11 col-md-12">

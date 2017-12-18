@@ -3,7 +3,7 @@
     <!-- header start -->
     <div class="container header">
       <div class="row">
-        <div class="col-sm-5 col-md-5 wow fadeInUpLeft animated"><a class="navbar-brand" href="index.html">globalnews</a></div>
+        <div class="col-sm-5 col-md-5"><a class="navbar-brand"></a></div>
       </div>
     </div>
     <!-- header end --> 

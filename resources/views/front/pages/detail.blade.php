@@ -1,17 +1,17 @@
 @extends('front.layouts.master')
 
 @section('title')
-  <title>Visi Misi - Unit Layanan Pengadaan Pemerintah Kota Depok</title>
+  <title>Detail Berita - Unit Layanan Pengadaan Pemerintah Kota Depok</title>
 @endsection
 
 @section('content')
-<!-- bage header Start -->
+    <!-- sticky header end -->
   <div class="container">
     <div class="page-header">
-      <h1>Visi Misi ULP</h1>
+      <h1>Detail Berita </h1>
       <ol class="breadcrumb">
-        <li><a href="{{route('front.homeindex')}}">Beranda</a></li>
-        <li class="active">Visi Misi</li>
+      <li><a href="{{route('front.homeindex')}}">Beranda</a></li>
+      <li class="active">Detail Berita</li>
       </ol>
     </div>
   </div>
@@ -28,12 +28,16 @@
               <div class="row">
                 <div class="sec-topic col-sm-16  wow fadeInDown animated " data-wow-delay="0.5s">
                   <div class="row">
+                    <div class="col-sm-16"><img width="1000" height="606" alt="" src="{{url('/')}}{{$newsdetail->file}}" class="img-thumbnail"></div>
                     <div class="col-sm-16 sec-info">
+                      <h3>{{$newsdetail->title}}</h3>
                       <div class="text-danger sub-info-bordered">
                         <div class="time"><span class="ion-android-data icon"></span>Dec 9 2014</div>
-                        <div class="comments"><span class="ion-chatbubbles icon"></span>{{$visimisi->view}}</div>
+                        <div class="comments"><span class="ion-chatbubbles icon"></span>{{$newsdetail->view}}</div>
                       </div>
-                      {!! $visimisi->desc !!}
+                      
+                        {!! $newsdetail->desc !!}
+
                     </div>
                   </div>
                 </div>
@@ -48,22 +52,21 @@
         <div class="col-sm-5 hidden-xs right-sec">
           <div class="bordered">
             <div class="row ">
+                <!-- activities start -->
+            <div class="col-sm-16 bt-space wow fadeInUp animated" data-wow-delay="1s" data-wow-offset="130"> 
+              <!-- Nav tabs -->
+              <ul class="nav nav-tabs nav-justified " role="tablist">
+                <li class="active"><a href="#popular" role="tab" data-toggle="tab">berita terbaru</a></li>
+                <li><a href="#recent" role="tab" data-toggle="tab">berita populer</a></li>
+              </ul>
               
-              <!-- activities start -->
-              <div class="col-sm-16 bt-space wow fadeInUp animated" data-wow-delay="1s" data-wow-offset="130"> 
-                <!-- Nav tabs -->
-                <ul class="nav nav-tabs nav-justified " role="tablist">
-                  <li class="active"><a href="#popular" role="tab" data-toggle="tab">Berita Terbaru</a></li>
-                  <li><a href="#recent" role="tab" data-toggle="tab">Berita Populer</a></li>
-                </ul>
-                
-                <!-- Tab panes -->
-                <div class="tab-content">
+              <!-- Tab panes -->
+              <div class="tab-content">
                 <div class="tab-pane active" id="popular">
                   <ul class="list-unstyled">
                     @foreach($latestnews as $i => $item)
                       @if($i<5)
-                      <li> <a href="{{route('front.berita', $item->id)}}">
+                      <li> <a href="#">
                         <div class="row">
                           <div class="col-sm-5 col-md-4"><img class="img-thumbnail pull-left" src="{{url('/')}}{{$item->file}}" width="164" height="152" alt=""/> </div>
                           <div class="col-sm-11 col-md-12">
@@ -83,7 +86,7 @@
                   <ul class="list-unstyled">
                     @foreach($popularnews as $i => $item)
                       @if($i<5)
-                      <li> <a href="{{route('front.berita', $item->id)}}">
+                      <li> <a href="#">
                         <div class="row">
                           <div class="col-sm-5 col-md-4"><img class="img-thumbnail pull-left" src="{{url('/')}}{{$item->file}}" width="164" height="152" alt=""/> </div>
                           <div class="col-sm-11 col-md-12">
@@ -100,8 +103,8 @@
                   </ul>
                 </div>
               </div>
-              </div>
-              <!-- activities end --> 
+            </div>
+            <!-- activities end --> 
             </div>
           </div>
         </div>

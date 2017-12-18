@@ -57,5 +57,6 @@ Route::get('/dokumentasi-foto', 'FrontFotoController@index')->name('front.foto')
 Route::get('/dokumentasi-video', 'FrontVideoController@index')->name('front.video');
 Route::get('/kategori-berita/{id}', 'FrontBeritaByKatController@index')->name('front.newsbycat');
 Route::get('/kontak-lembaga', 'FrontKontakLembagaController@index')->name('front.kontak');
+Route::get('/detail-berita/{id}', 'FrontBeritaController@index')->name('front.berita');
 
 // -------------- FRONT END
