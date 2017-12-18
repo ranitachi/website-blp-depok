@@ -12,16 +12,16 @@
 <!-- google font -->
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,800' rel='stylesheet' type='text/css'>
 <!-- ionicons font -->
-<link href="css/ionicons.min.css" rel="stylesheet">
+<link href="{{asset('front/css/ionicons.min.css')}}" rel="stylesheet">
 <!-- animation styles -->
-<link rel="stylesheet" href="css/animate.css" />
+<link rel="stylesheet" href="{{asset('front/')}}css/animate.css" />
 <!-- custom styles -->
-<link href="css/custom-red.css" rel="stylesheet" id="style">
+<link href="{{asset('front/css/custom-red.css')}}" rel="stylesheet" id="style">
 <!-- owl carousel styles-->
-<link rel="stylesheet" href="css/owl.carousel.css">
-<link rel="stylesheet" href="css/owl.transitions.css">
+<link rel="stylesheet" href="{{asset('front/css/owl.carousel.css')}}">
+<link rel="stylesheet" href="{{asset('front/css/owl.transitions.css')}}">
 <!-- magnific popup styles -->
-<link rel="stylesheet" href="css/magnific-popup.css">
+<link rel="stylesheet" href="{{asset('front/css/magnific-popup.css')}}">
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -71,7 +71,7 @@
     <div class="container header">
       <div class="row">
         <div class="col-sm-5 col-md-5 wow fadeInUpLeft animated"><a class="navbar-brand" href="index.html">globalnews</a></div>
-        <div class="col-sm-11 col-md-11 hidden-xs text-right"><img src="images/ads/468-60-ad.gif" width="468" height="60" alt=""/></div>
+        <div class="col-sm-11 col-md-11 hidden-xs text-right"><img src="{{asset('front/images/ads/468-60-ad.gif')}}" width="468" height="60" alt=""/></div>
       </div>
     </div>
     <!-- header end --> 
@@ -90,45 +90,6 @@
                 <ul class="nav navbar-nav text-uppercase main-nav ">
                   <li class="active"><a href="index.html">home</a></li>
                   <li> <a href="javascript:void(0)">business</a></li>
-                  <li class="dropdown"> <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">lifestyle<span class="ion-ios7-arrow-down nav-icn"></span></a>
-                    <ul class="dropdown-menu text-capitalize mega-menu" role="menu">
-                      <li>
-                        <div class="row">
-                          <div class="col-sm-16">
-                            <div class="row">
-                              <div class="col-xs-16 col-sm-16 col-md-6 col-lg-6">
-                                <ul class="mega-sub">
-                                  <li><a href="#"><span class="ion-ios7-arrow-right nav-sub-icn"></span>Home Decoration<span class="badge pull-right">Featured</span></a> </li>
-                                  <li><a href="#"><span class="ion-ios7-arrow-right nav-sub-icn"></span>Handbags &amp; Shoes</a> </li>
-                                  <li><a href="#"><span class="ion-ios7-arrow-right nav-sub-icn"></span>Furnishings &amp; Homeware<span class="badge pull-right">New</span></a> </li>
-                                  <li><a href="#"><span class="ion-ios7-arrow-right nav-sub-icn"></span>Beauty &amp; Fashion</a> </li>
-                                </ul>
-                              </div>
-                              <div class="col-sm-10 mega-sub-topics hidden-sm hidden-xs">
-                                <div class="row">
-                                  <div class="col-sm-8">
-                                    <div class="vid-thumb">
-                                      <h4>Buying a home: is it worth paying for a Homebuyer Report?</h4>
-                                      <a class="popup-youtube" href="https://www.youtube.com/watch?v=TEnNaUg6Vm4">
-                                      <div class="vid-box"><span class="ion-ios7-film"></span><img class="img-thumbnail" src="images/lifestyle/lifestyle-slide-2.jpg" width="300" height="132" alt=""/> </div>
-                                      </a> </div>
-                                  </div>
-                                  <div class="col-sm-8">
-                                    <div class="sub-topic-thumb">
-                                      <h4>Sugar-free chocolate recipes: dark chocolate</h4>
-                                      <a href="">
-                                      <div class="sub-box"><img class="img-thumbnail" src="images/lifestyle/lifestyle-slide-1.jpg" width="300" height="132" alt=""/> </div>
-                                      </a> </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </li>
-                  <li> <a href="javascript:void(0)">science</a></li>
                   <li class="dropdown"> <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">politics<span class="ion-ios7-arrow-down nav-icn"></span></a>
                     <ul class="dropdown-menu text-capitalize" role="menu">
                       <li><a href="javascript:void(0)"><span class="ion-ios7-arrow-right nav-sub-icn"></span>World News</a></li>
@@ -136,30 +97,6 @@
                       <li><a href="javascript:void(0)"><span class="ion-ios7-arrow-right nav-sub-icn"></span>AFRICA</a></li>
                       <li><a href="javascript:void(0)"><span class="ion-ios7-arrow-right nav-sub-icn"></span>Arabian Gulf</a></li>
                       <li><a href="javascript:void(0)"><span class="ion-ios7-arrow-right nav-sub-icn"></span>Topics and Issues</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="javascript:void(0)">sport</a></li>
-                  <li><a href="javascript:void(0)" >travel</a></li>
-                  <li class="dropdown"> <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Pages<span class="ion-ios7-arrow-down nav-icn"></span></a>
-                    <ul class="dropdown-menu text-capitalize" role="menu">
-                      <li><a href="index.html"><span class="ion-ios7-arrow-right nav-sub-icn"></span>Home 1</a></li>
-                      <li><a href="index-2.html"><span class="ion-ios7-arrow-right nav-sub-icn"></span>Home 2</a></li>
-                      <li><a href="sections-page-style-1.html"><span class="ion-ios7-arrow-right nav-sub-icn"></span>sections page style 1</a></li>
-                      <li><a href="sections-page-style-2.html"><span class="ion-ios7-arrow-right nav-sub-icn"></span>sections page style 2</a></li>
-                      <li><a href="section-topic-details.html"><span class="ion-ios7-arrow-right nav-sub-icn"></span>section topic details</a></li>
-                      <li><a href="404.html"><span class="ion-ios7-arrow-right nav-sub-icn"></span>404</a></li>
-                      <li><a href="gallery.html"><span class="ion-ios7-arrow-right nav-sub-icn"></span>Gallery</a></li>
-                      <li><a href="author-page.html"><span class="ion-ios7-arrow-right nav-sub-icn"></span>author page</a></li>
-                      <li><a href="contact-us.html"><span class="ion-ios7-arrow-right nav-sub-icn"></span>contact us</a></li>
-                      <li><a href="search-result-found.html"><span class="ion-ios7-arrow-right nav-sub-icn"></span>search result found</a></li>
-                      <li><a href="search-result-not-found.html"><span class="ion-ios7-arrow-right nav-sub-icn"></span>search result not found</a></li>
-                      <li><a href="faqs.html"><span class="ion-ios7-arrow-right nav-sub-icn"></span>FAQ's</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"> <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">blog<span class="ion-ios7-arrow-down nav-icn"></span></a>
-                    <ul class="dropdown-menu text-capitalize" role="menu">
-                      <li><a href="blog-masonry.html"><span class="ion-ios7-arrow-right nav-sub-icn"></span>blog masonry</a></li>
-                      <li><a href="post-item-details.html"><span class="ion-ios7-arrow-right nav-sub-icn"></span>post item details</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -209,14 +146,13 @@
       <!-- banner outer start -->
       <div  class="col-sm-16 banner-outer wow fadeInLeft animated" data-wow-delay="1s" data-wow-offset="50">
         <div class="row">
-          <div class="col-sm-16 col-md-10 col-lg-8"> 
-            
+          <div class="col-sm-16 col-md-16 col-lg-16"> 
             <!-- carousel start -->
             <div id="sync1" class="owl-carousel">
               <div class="box item"> <a href="#">
                 <div class="carousel-caption">Republican budget leader Paul Ryan
                   faces key test in fiscal talks</div>
-                <img class="img-responsive" src="images/banner-slider/slide-img-1.jpg" width="1600" height="972" alt=""/>
+                <img class="img-responsive" src="{{asset('front/images/banner-slider/slide-img-1.jpg')}}" width="1600" height="972" alt=""/>
                 <div class="overlay"></div>
                 <div class="overlay-info">
                   <div class="cat">
@@ -230,7 +166,7 @@
               <div class="box item"> <a href="#">
                 <div class="carousel-caption">Republican budget leader Paul Ryan
                   faces key test in fiscal talks</div>
-                <img class="img-responsive"  src="images/banner-slider/slide-img-2.jpg"  width="1600" height="972" alt=""/>
+                <img class="img-responsive"  src="{{asset('front/images/banner-slider/slide-img-2.jpg')}}"  width="1600" height="972" alt=""/>
                 <div class="overlay"></div>
                 <div class="overlay-info">
                   <div class="cat">
@@ -244,7 +180,7 @@
               <div class="box item"> <a href="#">
                 <div class="carousel-caption">Republican budget leader Paul Ryan
                   faces key test in fiscal talks</div>
-                <img class="img-responsive"  src="images/banner-slider/slide-img-3.jpg"  width="1600" height="972" alt=""/>
+                <img class="img-responsive"  src="{{asset('front/images/banner-slider/slide-img-3.jpg')}}"  width="1600" height="972" alt=""/>
                 <div class="overlay"></div>
                 <div class="overlay-info">
                   <div class="cat">
@@ -258,7 +194,7 @@
               <div class="box item"> <a href="#">
                 <div class="carousel-caption">Republican budget leader Paul Ryan
                   faces key test in fiscal talks</div>
-                <img class="img-responsive" src="images/banner-slider/slide-img-4.jpg"  width="1600" height="972" alt=""/>
+                <img class="img-responsive" src="{{asset('front/images/banner-slider/slide-img-4.jpg')}}"  width="1600" height="972" alt=""/>
                 <div class="overlay"></div>
                 <div class="overlay-info">
                   <div class="cat">
@@ -272,7 +208,7 @@
               <div class="box item"> <a href="#">
                 <div class="carousel-caption">Republican budget leader Paul Ryan
                   faces key test in fiscal talks</div>
-                <img  class="img-responsive" src="images/banner-slider/slide-img-5.jpg"  width="1600" height="972" alt=""/>
+                <img  class="img-responsive" src="{{asset('front/images/banner-slider/slide-img-5.jpg')}}"  width="1600" height="972" alt=""/>
                 <div class="overlay"></div>
                 <div class="overlay-info">
                   <div class="cat">
@@ -286,7 +222,7 @@
               <div class="box item"> <a href="#">
                 <div class="carousel-caption">Republican budget leader Paul Ryan
                   faces key test in fiscal talks</div>
-                <img class="img-responsive" src="images/banner-slider/slide-img-6.jpg"  width="1600" height="972" alt=""/>
+                <img class="img-responsive" src="{{asset('front/images/banner-slider/slide-img-6.jpg')}}"  width="1600" height="972" alt=""/>
                 <div class="overlay"></div>
                 <div class="overlay-info">
                   <div class="cat">
@@ -300,7 +236,7 @@
               <div class="box item"> <a href="#">
                 <div class="carousel-caption">Republican budget leader Paul Ryan
                   faces key test in fiscal talks</div>
-                <img class="img-responsive" src="images/banner-slider/slide-img-7.jpg"  width="1600" height="972" alt=""/>
+                <img class="img-responsive" src="{{asset('front/images/banner-slider/slide-img-7.jpg')}}"  width="1600" height="972" alt=""/>
                 <div class="overlay"></div>
                 <div class="overlay-info">
                   <div class="cat">
@@ -314,7 +250,7 @@
               <div class="box item"> <a href="#">
                 <div class="carousel-caption">Republican budget leader Paul Ryan
                   faces key test in fiscal talks</div>
-                <img class="img-responsive"   src="images/banner-slider/slide-img-8.jpg"  width="1600" height="972" alt=""/>
+                <img class="img-responsive"   src="{{asset('front/images/banner-slider/slide-img-8.jpg')}}"  width="1600" height="972" alt=""/>
                 <div class="overlay"></div>
                 <div class="overlay-info">
                   <div class="cat">
@@ -328,71 +264,14 @@
             </div>
             <div class="row">
               <div id="sync2" class="owl-carousel">
-                <div class="item"><img class=" img-responsive" src="images/banner-slider/slide-img-1.jpg"  width="1600" height="972" alt=""/></div>
-                <div class="item"><img class="img-responsive" src="images/banner-slider/slide-img-2.jpg"  width="1600" height="972" alt=""/></div>
-                <div class="item"><img class="img-responsive" src="images/banner-slider/slide-img-3.jpg"  width="1600" height="972" alt=""/></div>
-                <div class="item"><img class="img-responsive " src="images/banner-slider/slide-img-4.jpg"  width="1600" height="972" alt=""/></div>
-                <div class="item"><img class="img-responsive " src="images/banner-slider/slide-img-5.jpg"  width="1600" height="972" alt=""/></div>
-                <div class="item"><img class="img-responsive " src="images/banner-slider/slide-img-6.jpg"  width="1600" height="972" alt=""/></div>
-                <div class="item"><img class="img-responsive" src="images/banner-slider/slide-img-7.jpg"  width="1600" height="972" alt=""/></div>
-                <div class="item"><img class="img-responsive " src="images/banner-slider/slide-img-8.jpg"  width="1600" height="972" alt=""/></div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-6 col-lg-8 hidden-sm hidden-xs">
-            <div class="row">
-              <div class="col-lg-6 hidden-md"><a href="#">
-                <div class="box">
-                  <div class=" carousel-caption">Extreme biking:
-                    dangerous, dirty
-                    and Fun</div>
-                  <img class="match-height" src="images/banner-static/bs-1.jpg" width="236" height="480"  alt="" />
-                  <div class="overlay"></div>
-                  <div class="overlay-info">
-                    <div class="cat">
-                      <p class="cat-data"><span class="ion-model-s"></span>Lifestyle</p>
-                    </div>
-                    <div class="info">
-                      <p><span class="ion-android-data"></span>Dec 16 2014<span class="ion-chatbubbles"></span>351</p>
-                    </div>
-                  </div>
-                </div>
-                </a> </div>
-              <div class="col-md-16 col-lg-10">
-                <div class="row">
-                  <div class="col-sm-16 right-img-top "> <a href="#">
-                    <div class="box">
-                      <div class="carousel-caption">Best snack ever: mini mac and
-                        cheese cupcakes</div>
-                      <img class="img-responsive" src="images/banner-static/bs-2.jpg" width="440" height="292" alt=""/>
-                      <div class="overlay"></div>
-                      <div class="overlay-info">
-                        <div class="cat">
-                          <p class="cat-data"><span class="ion-model-s"></span>Lifestyle</p>
-                        </div>
-                        <div class="info">
-                          <p><span class="ion-android-data"></span>Dec 16 2014<span class="ion-chatbubbles"></span>351</p>
-                        </div>
-                      </div>
-                    </div>
-                    </a> </div>
-                  <div class="col-sm-16 right-img-btm "> <a href="#">
-                    <div class="box">
-                      <div class="carousel-caption">Rolls Royce chicane phantom
-                        coupé will terrify continental</div>
-                      <img class="img-responsive" src="images/banner-static/bs-3.jpg" width="440" height="292" alt=""/>
-                      <div class="overlay"></div>
-                      <div class="overlay-info">
-                        <div class="cat">
-                          <p class="cat-data"><span class="ion-model-s"></span>Lifestyle</p>
-                        </div>
-                        <div class="info">
-                          <p><span class="ion-android-data"></span>Dec 16 2014<span class="ion-chatbubbles"></span>351</p>
-                        </div>
-                      </div>
-                    </div>
-                    </a> </div>
-                </div>
+                <div class="item"><img class=" img-responsive" src="{{asset('front/images/banner-slider/slide-img-1.jpg')}}"  width="1600" height="972" alt=""/></div>
+                <div class="item"><img class="img-responsive" src="{{asset('front/images/banner-slider/slide-img-2.jpg')}}"  width="1600" height="972" alt=""/></div>
+                <div class="item"><img class="img-responsive" src="{{asset('front/images/banner-slider/slide-img-3.jpg')}}"  width="1600" height="972" alt=""/></div>
+                <div class="item"><img class="img-responsive " src="{{asset('front/images/banner-slider/slide-img-4.jpg')}}"  width="1600" height="972" alt=""/></div>
+                <div class="item"><img class="img-responsive " src="{{asset('front/images/banner-slider/slide-img-5.jpg')}}"  width="1600" height="972" alt=""/></div>
+                <div class="item"><img class="img-responsive " src="{{asset('front/images/banner-slider/slide-img-6.jpg')}}"  width="1600" height="972" alt=""/></div>
+                <div class="item"><img class="img-responsive" src="{{asset('front/images/banner-slider/slide-img-7.jpg')}}"  width="1600" height="972" alt=""/></div>
+                <div class="item"><img class="img-responsive " src="{{asset('front/images/banner-slider/slide-img-8.jpg')}}"  width="1600" height="972" alt=""/></div>
               </div>
             </div>
           </div>
@@ -412,132 +291,10 @@
       <div class="col-md-11 col-sm-11">
         <div class="row"> 
           <!-- business start -->
-          <div class="col-sm-16 business  wow fadeInDown animated" data-wow-delay="1s" data-wow-offset="50">
-            <div class="main-title-outer pull-left">
-              <div class="main-title">business</div>
-              <div class="span-outer"><span class="pull-right text-danger last-update"><span class="ion-android-data icon"></span>Last update: 2 days ago</span> </div>
-            </div>
-            <div class="row">
-              <div class="col-md-11 col-sm-16">
-                <div class="row">
-                  <div class="col-md-8 col-sm-9 col-xs-16">
-                    <div class="topic"> <a href="#"><img class="img-thumbnail" src="images/business/business-main.jpg" width="600" height="398" alt=""/>
-                      <h3>Famous artist share his tracks for free</h3>
-                      <div class="text-danger sub-info-bordered">
-                        <div class="time"><span class="ion-android-data icon"></span>Dec 9 2014</div>
-                        <div class="comments"><span class="ion-chatbubbles icon"></span>204</div>
-                        <div class="stars"><span class="ion-ios7-star"></span><span class="ion-ios7-star"></span><span class="ion-ios7-star"></span><span class="ion-ios7-star"></span><span class="ion-ios7-star-half"></span></div>
-                      </div>
-                      </a>
-                      <p>Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.</p>
-                    </div>
-                  </div>
-                  <div class="col-md-8 col-sm-7 col-xs-16">
-                    <ul class="list-unstyled">
-                      <li> <a href="#">
-                        <div class="row">
-                          <div class="col-sm-5 hidden-sm hidden-md"><img class="img-thumbnail pull-left" src="images/business/business-th-1.jpg" width="76" height="76" alt=""/> </div>
-                          <div class="col-sm-16 col-md-16 col-lg-11">
-                            <h4>Irish cream and chocolate
-                              cheesecake </h4>
-                            <div class="text-danger sub-info">
-                              <div class="time"><span class="ion-android-data icon"></span>Dec 16 2014</div>
-                              <div class="comments"><span class="ion-chatbubbles icon"></span>351</div>
-                              <div class="stars"><span class="ion-ios7-star"></span><span class="ion-ios7-star"></span><span class="ion-ios7-star"></span><span class="ion-ios7-star"></span><span class="ion-ios7-star-half"></span></div>
-                            </div>
-                          </div>
-                        </div>
-                        </a> </li>
-                      <li> <a href="#">
-                        <div class="row">
-                          <div class="col-sm-5 hidden-sm hidden-md"><img class="img-thumbnail pull-left" src="images/business/business-th-2.jpg" width="76" height="76" alt=""/> </div>
-                          <div class="col-sm-16 col-md-16 col-lg-11">
-                            <h4>Nielsen forecasts smaller black friday </h4>
-                            <div class="text-danger sub-info">
-                              <div class="time"><span class="ion-android-data icon"></span>Dec 16 2014</div>
-                              <div class="comments"><span class="ion-chatbubbles icon"></span>351</div>
-                              <div class="stars"><span class="ion-ios7-star"></span><span class="ion-ios7-star"></span><span class="ion-ios7-star"></span><span class="ion-ios7-star"></span><span class="ion-ios7-star-half"></span></div>
-                            </div>
-                          </div>
-                        </div>
-                        </a> </li>
-                      <li> <a href="#">
-                        <div class="row">
-                          <div class="col-sm-5 hidden-sm hidden-md"><img class="img-thumbnail pull-left" src="images/business/business-th-3.jpg" width="76" height="76" alt=""/> </div>
-                          <div class="col-sm-16 col-md-16 col-lg-11">
-                            <h4>Nielsen forecasts smaller black friday </h4>
-                            <div class="text-danger sub-info">
-                              <div class="time"><span class="ion-android-data icon"></span>Dec 16 2014</div>
-                              <div class="comments"><span class="ion-chatbubbles icon"></span>351</div>
-                              <div class="stars"><span class="ion-ios7-star"></span><span class="ion-ios7-star"></span><span class="ion-ios7-star"></span><span class="ion-ios7-star"></span><span class="ion-ios7-star-half"></span></div>
-                            </div>
-                          </div>
-                        </div>
-                        </a> </li>
-                      <li> <a href="#">
-                        <div class="row">
-                          <div class="col-sm-5 hidden-sm hidden-md"><img class="img-thumbnail pull-left" src="images/business/business-th-4.jpg" width="76" height="76" alt=""/> </div>
-                          <div class="col-sm-16 col-md-16 col-lg-11">
-                            <h4>The evolution of the apple mouse</h4>
-                            <div class="text-danger sub-info">
-                              <div class="time"><span class="ion-android-data icon"></span>Dec 16 2014</div>
-                              <div class="comments"><span class="ion-chatbubbles icon"></span>351</div>
-                              <div class="stars"><span class="ion-ios7-star"></span><span class="ion-ios7-star"></span><span class="ion-ios7-star"></span><span class="ion-ios7-star"></span><span class="ion-ios7-star-half"></span></div>
-                            </div>
-                          </div>
-                        </div>
-                        </a> </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-5 col-sm-16 hidden-sm hidden-xs  left-bordered">
-                <div id="vid-thumbs" class="owl-carousel">
-                  <div class="item">
-                    <div class="vid-thumb-outer">
-                      <div class="vid-thumb"><a class="popup-youtube" href="https://www.youtube.com/watch?v=TEnNaUg6Vm4">
-                        <div class="vid-box"><span class="ion-ios7-film"></span><img class="img-thumbnail img-responsive" src="images/business/business-vid-1.jpg" width="250" height="143" alt=""/> </div>
-                        <h4>Perspiciatis unde omnis iste natus</h4>
-                        </a> </div>
-                      <div class="vid-thumb"><a class="popup-youtube" href="http://vimeo.com/7396421">
-                        <div class="vid-box"><span class="ion-ios7-film"></span><img class="img-thumbnail img-responsive" src="images/business/business-vid-2.jpg" width="250" height="143" alt=""/> </div>
-                        <h4>Cras tincidunt enim non metus ultricies.</h4>
-                        </a> </div>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <div class="vid-thumb-outer">
-                      <div class="vid-thumb"><a href="">
-                        <div class="vid-box"><span class="ion-ios7-film"></span><img class="img-thumbnail img-responsive" src="images/business/business-vid-1.jpg" width="250" height="143" alt=""/> </div>
-                        <h4>Perspiciatis unde omnis iste natus</h4>
-                        </a> </div>
-                      <div class="vid-thumb"><a href="">
-                        <div class="vid-box"><span class="ion-ios7-film"></span><img class="img-thumbnail img-responsive" src="images/business/business-vid-2.jpg" width="250" height="143" alt=""/> </div>
-                        <h4>Cras tincidunt enim non metus ultricies.</h4>
-                        </a> </div>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <div class="vid-thumb-outer">
-                      <div class="vid-thumb"><a href="">
-                        <div class="vid-box"><span class="ion-ios7-film"></span><img class="img-thumbnail img-responsive" src="images/business/business-vid-1.jpg" width="250" height="143" alt=""/> </div>
-                        <h4>Perspiciatis unde omnis iste natus</h4>
-                        </a> </div>
-                      <div class="vid-thumb"><a href="">
-                        <div class="vid-box"><span class="ion-ios7-film"></span><img class="img-thumbnail img-responsive" src="images/business/business-vid-2.jpg" width="250" height="143" alt=""/> </div>
-                        <h4>Cras tincidunt enim non metus ultricies.</h4>
-                        </a> </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <hr>
-          </div>
-          <!-- business end --> 
+          
           
           <!-- Science & Travel start -->
-          <div class="col-sm-16">
+          <div class="col-sm-16 business">
             <div class="row">
               <div class="col-xs-16 col-sm-8  wow fadeInLeft animated science" data-wow-delay="0.5s" data-wow-offset="130">
                 <div class="main-title-outer pull-left">
@@ -545,7 +302,7 @@
                   <div class="span-outer"><span class="pull-right text-danger last-update"><span class="ion-android-data icon"></span>Last update: 2 days ago</span> </div>
                 </div>
                 <div class="row">
-                  <div class="topic col-sm-16"> <a href="#"><img class=" img-thumbnail" src="images/science/sci-main.jpg" width="600" height="227" alt=""/>
+                  <div class="topic col-sm-16"> <a href="#"><img class=" img-thumbnail" src="{{asset('front/images/science/sci-main.jpg')}}" width="600" height="227" alt=""/>
                     <h3> Curabitur ullamcorper ultricies nisi nam eget dui</h3>
                     <div class="text-danger sub-info-bordered ">
                       <div class="time"><span class="ion-android-data icon"></span>Dec 9 2014</div>
@@ -559,7 +316,7 @@
                     <ul class="list-unstyled  top-bordered ex-top-padding">
                       <li> <a href="#">
                         <div class="row">
-                          <div class="col-lg-3 col-md-4 hidden-sm  "><img width="76" height="76" alt="" src="images/science/sci-th-1.jpg" class="img-thumbnail pull-left"> </div>
+                          <div class="col-lg-3 col-md-4 hidden-sm  "><img width="76" height="76" alt="" src="{{asset('front/images/science/sci-main.jpg')}}" class="img-thumbnail pull-left"> </div>
                           <div class="col-lg-13 col-md-12">
                             <h4>Irish cream and chocolate
                               cheesecake </h4>
@@ -573,7 +330,7 @@
                         </a> </li>
                       <li> <a href="#">
                         <div class="row ">
-                          <div class="col-lg-3 col-md-4 hidden-sm  "><img width="76" height="76" alt="" src="images/science/sci-th-2.jpg" class="img-thumbnail pull-left"> </div>
+                          <div class="col-lg-3 col-md-4 hidden-sm  "><img width="76" height="76" alt="" src="{{asset('front/images/science/sci-main.jpg')}}" class="img-thumbnail pull-left"> </div>
                           <div class="col-lg-13 col-md-12">
                             <h4>Irish cream and chocolate
                               cheesecake </h4>
@@ -595,7 +352,7 @@
                   <div class="span-outer"><span class="pull-right text-danger last-update"><span class="ion-android-data icon"></span>Last update: 2 days ago</span> </div>
                 </div>
                 <div class="row left-bordered">
-                  <div class="topic col-sm-16"> <a href="#"> <img  class="img-thumbnail" src="images/travel/travel-main.jpg" width="600" height="227" alt=""/>
+                  <div class="topic col-sm-16"> <a href="#"> <img  class="img-thumbnail" src="{{asset('front/images/science/sci-main.jpg')}}" width="600" height="227" alt=""/>
                     <h3>Feds open formal probe into tesla
                       electric ship</h3>
                     <div class="text-danger sub-info-bordered">
@@ -610,7 +367,7 @@
                     <ul class="list-unstyled top-bordered ex-top-padding">
                       <li> <a href="#">
                         <div class="row">
-                          <div class="col-lg-3 col-md-4 hidden-sm  "><img width="76" height="76" alt="" src="images/travel/travel-th-1.jpg" class="img-thumbnail pull-left"> </div>
+                          <div class="col-lg-3 col-md-4 hidden-sm  "><img width="76" height="76" alt="" src="{{asset('front/images/science/sci-main.jpg')}}" class="img-thumbnail pull-left"> </div>
                           <div class="col-lg-13 col-md-12">
                             <h4>Irish cream and chocolate
                               cheesecake </h4>
@@ -624,7 +381,7 @@
                         </a> </li>
                       <li> <a href="#">
                         <div class="row ">
-                          <div class="col-lg-3 col-md-4 hidden-sm  "><img width="76" height="76" alt="" src="images/travel/travel-th-2.jpg" class="img-thumbnail pull-left"> </div>
+                          <div class="col-lg-3 col-md-4 hidden-sm  "><img width="76" height="76" alt="" src="{{asset('front/images/science/sci-main.jpg')}}" class="img-thumbnail pull-left"> </div>
                           <div class="col-lg-13 col-md-12">
                             <h4>Irish cream and chocolate
                               cheesecake </h4>
@@ -644,116 +401,6 @@
             <hr>
           </div>
           <!-- Scince & Travel end --> 
-          <!-- lifestyle start-->
-          <div class="col-sm-16 wow fadeInUp animated " data-wow-delay="0.5s" data-wow-offset="100">
-            <div class="main-title-outer pull-left">
-              <div class="main-title">lifestyle</div>
-              <div class="span-outer"><span class="pull-right text-danger last-update"><span class="ion-android-data icon"></span>Last update: 3 days ago</span> </div>
-            </div>
-            <div class="row">
-              <div id="owl-lifestyle" class="owl-carousel owl-theme lifestyle pull-left">
-                <div class="item topic"> <a href="#"> <img class="img-thumbnail" src="images/lifestyle/lifestyle-slide-1.jpg" width="300" height="132" alt=""/>
-                  <h4>Etiam rhoncus. Maecenas tempus, tellus eget condimentum</h4>
-                  <div class="text-danger sub-info-bordered remove-borders">
-                    <div class="time"><span class="ion-android-data icon"></span>Dec 9 2014</div>
-                    <div class="comments"><span class="ion-chatbubbles icon"></span>204</div>
-                    <div class="stars"><span class="ion-ios7-star"></span><span class="ion-ios7-star"></span><span class="ion-ios7-star"></span><span class="ion-ios7-star"></span><span class="ion-ios7-star-half"></span></div>
-                  </div>
-                  </a> </div>
-                <div class="item topic"> <a href="#"> <img class="img-thumbnail" src="images/lifestyle/lifestyle-slide-2.jpg" width="300" height="132" alt=""/>
-                  <h4>Etiam rhoncus. Maecenas tempus, tellus eget condimentum</h4>
-                  <div class="text-danger sub-info-bordered remove-borders">
-                    <div class="time"><span class="ion-android-data icon"></span>Dec 9 2014</div>
-                    <div class="comments"><span class="ion-chatbubbles icon"></span>204</div>
-                    <div class="stars"><span class="ion-ios7-star"></span><span class="ion-ios7-star"></span><span class="ion-ios7-star"></span><span class="ion-ios7-star"></span><span class="ion-ios7-star-half"></span></div>
-                  </div>
-                  </a> </div>
-                <div class="item topic"> <a href="#"> <img class="img-thumbnail" src="images/lifestyle/lifestyle-slide-3.jpg" width="300" height="132" alt=""/>
-                  <h4>Etiam rhoncus. Maecenas tempus, tellus eget condimentum</h4>
-                  <div class="text-danger sub-info-bordered remove-borders">
-                    <div class="time"><span class="ion-android-data icon"></span>Dec 9 2014</div>
-                    <div class="comments"><span class="ion-chatbubbles icon"></span>204</div>
-                    <div class="stars"><span class="ion-ios7-star"></span><span class="ion-ios7-star"></span><span class="ion-ios7-star"></span><span class="ion-ios7-star"></span><span class="ion-ios7-star-half"></span></div>
-                  </div>
-                  </a> </div>
-                <div class="item topic"> <a href="#"> <img class="img-thumbnail" src="images/lifestyle/lifestyle-slide-1.jpg" width="300" height="132" alt=""/>
-                  <h4>Etiam rhoncus. Maecenas tempus, tellus eget condimentum</h4>
-                  <div class="text-danger sub-info-bordered remove-borders">
-                    <div class="time"><span class="ion-android-data icon"></span>Dec 9 2014</div>
-                    <div class="comments"><span class="ion-chatbubbles icon"></span>204</div>
-                    <div class="stars"><span class="ion-ios7-star"></span><span class="ion-ios7-star"></span><span class="ion-ios7-star"></span><span class="ion-ios7-star"></span><span class="ion-ios7-star-half"></span></div>
-                  </div>
-                  </a> </div>
-                <div class="item topic"> <a href="#"> <img class="img-thumbnail" src="images/lifestyle/lifestyle-slide-2.jpg" width="300" height="132" alt=""/>
-                  <h4>Etiam rhoncus. Maecenas tempus, tellus eget condimentum</h4>
-                  <div class="text-danger sub-info-bordered remove-borders">
-                    <div class="time"><span class="ion-android-data icon"></span>Dec 9 2014</div>
-                    <div class="comments"><span class="ion-chatbubbles icon"></span>204</div>
-                    <div class="stars"><span class="ion-ios7-star"></span><span class="ion-ios7-star"></span><span class="ion-ios7-star"></span><span class="ion-ios7-star"></span><span class="ion-ios7-star-half"></span></div>
-                  </div>
-                  </a> </div>
-                <div class="item topic"> <a href="#"> <img class="img-thumbnail" src="images/lifestyle/lifestyle-slide-3.jpg" width="300" height="132" alt=""/>
-                  <h4>Etiam rhoncus. Maecenas tempus, tellus eget condimentum</h4>
-                  <div class="text-danger sub-info-bordered remove-borders">
-                    <div class="time"><span class="ion-android-data icon"></span>Dec 9 2014</div>
-                    <div class="comments"><span class="ion-chatbubbles icon"></span>204</div>
-                    <div class="stars"><span class="ion-ios7-star"></span><span class="ion-ios7-star"></span><span class="ion-ios7-star"></span><span class="ion-ios7-star"></span><span class="ion-ios7-star-half"></span></div>
-                  </div>
-                  </a> </div>
-              </div>
-            </div>
-            <hr>
-          </div>
-          <!-- lifestyle end --> 
-          
-          <!--Recent videos start-->
-          <div class="col-sm-16 recent-vid wow fadeInDown animated " data-wow-delay="0.5s" data-wow-offset="50">
-            <div class="main-title-outer pull-left">
-              <div class="main-title">recent videos</div>
-              <div class="span-outer"><span class="pull-right text-danger last-update"><span class="ion-android-data icon"></span>Last update: 1 day ago</span> </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-11 col-xs-16"> 
-                <!-- Tab panes -->
-                <div class="tab-content">
-                  <div id="vid-first" class="tab-pane embed-responsive embed-responsive-16by9 active">
-                    <iframe width="514" height="289" src="//www.youtube.com/embed/OFDAGiPJHL8?showinfo=0" frameborder="0" allowfullscreen></iframe>
-                  </div>
-                  <div id="vid-second" class="tab-pane embed-responsive embed-responsive-16by9">
-                    <iframe width="514" height="289" frameborder="0" allowfullscreen="" src="//www.youtube.com/embed/TEnNaUg6Vm4?rel=0&amp;showinfo=0"></iframe>
-                  </div>
-                  <div id="vid-third" class="tab-pane embed-responsive embed-responsive-16by9">
-                    <iframe width="514" height="289" src="//www.youtube.com/embed/rDZ1AjDJjFI?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-5 col-xs-2"> <!-- required for floating --> 
-                <!-- Nav tabs -->
-                <ul class="nav nav-tabs tabs-right hidden-xs">
-                  <li class="active"><a data-toggle="tab" href="#vid-first">
-                    <div class="vid-thumb">
-                      <div class="vid-box"><span class="ion-eye"></span><img class="img-thumbnail" src="images/recent-videos/re-vid-1.jpg" width="234" height="87" alt=""/> </div>
-                    </div>
-                    </a></li>
-                  <li class=""><a data-toggle="tab" href="#vid-second">
-                    <div class="vid-thumb">
-                      <div class="vid-box"><span class="ion-eye"></span><img class="img-thumbnail" src="images/recent-videos/re-vid-2.jpg" width="234" height="87" alt=""/> </div>
-                    </div>
-                    </a></li>
-                  <li class=""><a data-toggle="tab" href="#vid-third">
-                    <div class="vid-thumb">
-                      <div class="vid-box"><span class="ion-eye"></span><img class="img-thumbnail" src="images/recent-videos/re-vid-3.jpg" width="234" height="87" alt=""/> </div>
-                    </div>
-                    </a></li>
-                </ul>
-              </div>
-            </div>
-            <hr>
-          </div>
-          <!--Recent videos end--> 
-          <!--wide ad start-->
-          <div class="col-sm-16 wow fadeInDown animated " data-wow-delay="0.5s" data-wow-offset="25"><img class="img-responsive" src="images/ads/728-90-ad.gif" width="728" height="90" alt=""/></div>
-          <!--wide ad end--> 
           
         </div>
       </div>
@@ -762,64 +409,12 @@
       <div class="col-sm-5 hidden-xs right-sec">
         <div class="bordered top-margin">
           <div class="row ">
-            <div class="col-sm-16 bt-space wow fadeInUp animated" data-wow-delay="1s" data-wow-offset="50"> <img class="img-responsive" src="images/ads/336-280-ad.gif" width="336" height="280" alt=""/> <a href="#" class="sponsored">sponsored advert</a> </div>
-            <div class="col-sm-16 bt-spac wow fadeInUp animated" data-wow-delay="1s" data-wow-offset="150">
-              <div class="table-responsive">
-                <table class="table table-bordered social">
-                  <tbody>
-                    <tr>
-                      <td><a class="rss" href="#">
-                        <p> <span class="ion-social-rss"></span> subscribe<br>
-                          to rss</p>
-                        </a></td>
-                      <td><a class="twitter" href="#">
-                        <p><span class="ion-social-twitter"></span> 811,6
-                          followers</p>
-                        </a></td>
-                      <td><a class="facebook" href="#">
-                        <p> <span class="ion-social-facebook"></span> 6958,56<br>
-                          fans</p>
-                        </a></td>
-                    </tr>
-                    <tr>
-                      <td><a class="youtube" href="#">
-                        <p> <span class="ion-social-youtube"></span> 6954,55
-                          subscribers</p>
-                        </a></td>
-                      <td><a class="vimeo" href="#">
-                        <p><span class="ion-social-vimeo"></span> 896,7
-                          subscribers</p>
-                        </a></td>
-                      <td><a class="dribbble" href="#">
-                        <p> <span class="ion-social-dribbble-outline"></span> 6321,56
-                          followers</p>
-                        </a></td>
-                    </tr>
-                    <tr>
-                      <td><a class="googleplus" href="#">
-                        <p> <span class="ion-social-googleplus"></span> 9625.56
-                          followers</p>
-                        </a></td>
-                      <td><a class="pinterest" href="#">
-                        <p><span class="ion-social-pinterest"></span> 741,9
-                          followers</p>
-                        </a></td>
-                      <td><a class="instagram" href="#">
-                        <p> <span class="ion-social-instagram"></span> 3548,7
-                          followers</p>
-                        </a></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
             <!-- activities start -->
             <div class="col-sm-16 bt-space wow fadeInUp animated" data-wow-delay="1s" data-wow-offset="130"> 
               <!-- Nav tabs -->
               <ul class="nav nav-tabs nav-justified " role="tablist">
                 <li class="active"><a href="#popular" role="tab" data-toggle="tab">popular</a></li>
                 <li><a href="#recent" role="tab" data-toggle="tab">recent</a></li>
-                <li><a href="#comments" role="tab" data-toggle="tab">comments</a></li>
               </ul>
               
               <!-- Tab panes -->
@@ -828,7 +423,7 @@
                   <ul class="list-unstyled">
                     <li> <a href="#">
                       <div class="row">
-                        <div class="col-sm-5 col-md-4"><img class="img-thumbnail pull-left" src="images/popular/pop-1.jpg" width="164" height="152" alt=""/> </div>
+                        <div class="col-sm-5 col-md-4"><img class="img-thumbnail pull-left" src="{{asset('front/images/popular/pop-1.jpg')}}" width="164" height="152" alt=""/> </div>
                         <div class="col-sm-11 col-md-12">
                           <h4>Tellus. Phasellus viverra nulla ut metus</h4>
                           <div class="text-danger sub-info">
@@ -841,7 +436,7 @@
                       </a> </li>
                     <li> <a href="#">
                       <div class="row">
-                        <div class="col-sm-5  col-md-4 "><img class="img-thumbnail pull-left" src="images/popular/pop-2.jpg" width="164" height="152" alt=""/> </div>
+                        <div class="col-sm-5  col-md-4 "><img class="img-thumbnail pull-left" src="{{asset('front/images/popular/pop-1.jpg')}}" width="164" height="152" alt=""/> </div>
                         <div class="col-sm-11 col-md-12">
                           <h4>The evolution of the apple ..</h4>
                           <div class="text-danger sub-info">
@@ -854,7 +449,7 @@
                       </a> </li>
                     <li> <a href="#">
                       <div class="row">
-                        <div class="col-sm-5  col-md-4 "><img class="img-thumbnail pull-left" src="images/popular/pop-3.jpg" width="164" height="152" alt=""/> </div>
+                        <div class="col-sm-5  col-md-4 "><img class="img-thumbnail pull-left" src="{{asset('front/images/popular/pop-1.jpg')}}" width="164" height="152" alt=""/> </div>
                         <div class="col-sm-11 col-md-12">
                           <h4>The evolution of the apple ..</h4>
                           <div class="text-danger sub-info">
@@ -867,7 +462,7 @@
                       </a> </li>
                     <li> <a href="#">
                       <div class="row">
-                        <div class="col-sm-5  col-md-4 "><img class="img-thumbnail pull-left" src="images/popular/pop-4.jpg" width="164" height="152" alt=""/> </div>
+                        <div class="col-sm-5  col-md-4 "><img class="img-thumbnail pull-left" src="{{asset('front/images/popular/pop-1.jpg')}}" width="164" height="152" alt=""/> </div>
                         <div class="col-sm-11 col-md-12">
                           <h4>The evolution of the apple ..</h4>
                           <div class="text-danger sub-info">
@@ -880,7 +475,7 @@
                       </a> </li>
                     <li> <a href="#">
                       <div class="row">
-                        <div class="col-sm-5  col-md-4 "><img class="img-thumbnail pull-left" src="images/popular/pop-5.jpg" width="164" height="152" alt=""/> </div>
+                        <div class="col-sm-5  col-md-4 "><img class="img-thumbnail pull-left" src="{{asset('front/images/popular/pop-1.jpg')}}" width="164" height="152" alt=""/> </div>
                         <div class="col-sm-11 col-md-12">
                           <h4>The evolution of the apple ..</h4>
                           <div class="text-danger sub-info">
@@ -897,7 +492,7 @@
                   <ul class="list-unstyled">
                     <li> <a href="#">
                       <div class="row">
-                        <div class="col-sm-5  col-md-4 "><img class="img-thumbnail pull-left" src="images/popular/pop-5.jpg" width="164" height="152" alt=""/> </div>
+                        <div class="col-sm-5  col-md-4 "><img class="img-thumbnail pull-left" src="{{asset('front/images/popular/pop-1.jpg')}}" width="164" height="152" alt=""/> </div>
                         <div class="col-sm-11  col-md-12 ">
                           <h4>The evolution of the apple ..</h4>
                           <div class="text-danger sub-info">
@@ -910,7 +505,7 @@
                       </a> </li>
                     <li> <a href="#">
                       <div class="row">
-                        <div class="col-sm-5  col-md-4 "><img class="img-thumbnail pull-left" src="images/popular/pop-4.jpg" width="164" height="152" alt=""/> </div>
+                        <div class="col-sm-5  col-md-4 "><img class="img-thumbnail pull-left" src="{{asset('front/images/popular/pop-1.jpg')}}" width="164" height="152" alt=""/> </div>
                         <div class="col-sm-11  col-md-12 ">
                           <h4>The evolution of the apple ..</h4>
                           <div class="text-danger sub-info">
@@ -923,7 +518,7 @@
                       </a> </li>
                     <li> <a href="#">
                       <div class="row">
-                        <div class="col-sm-5  col-md-4 "><img class="img-thumbnail pull-left" src="images/popular/pop-3.jpg" width="164" height="152" alt=""/> </div>
+                        <div class="col-sm-5  col-md-4 "><img class="img-thumbnail pull-left" src="{{asset('front/images/popular/pop-1.jpg')}}" width="164" height="152" alt=""/> </div>
                         <div class="col-sm-11  col-md-12 ">
                           <h4>The evolution of the apple ..</h4>
                           <div class="text-danger sub-info">
@@ -936,7 +531,7 @@
                       </a> </li>
                     <li> <a href="#">
                       <div class="row">
-                        <div class="col-sm-5  col-md-4 "><img class="img-thumbnail pull-left" src="images/popular/pop-2.jpg" width="164" height="152" alt=""/> </div>
+                        <div class="col-sm-5  col-md-4 "><img class="img-thumbnail pull-left" src="{{asset('front/images/popular/pop-1.jpg')}}" width="164" height="152" alt=""/> </div>
                         <div class="col-sm-11  col-md-12 ">
                           <h4>The evolution of the apple ..</h4>
                           <div class="text-danger sub-info">
@@ -949,7 +544,7 @@
                       </a> </li>
                     <li> <a href="#">
                       <div class="row">
-                        <div class="col-sm-5  col-md-4 "><img class="img-thumbnail pull-left" src="images/popular/pop-1.jpg" width="164" height="152" alt=""/> </div>
+                        <div class="col-sm-5  col-md-4 "><img class="img-thumbnail pull-left" src="{{asset('front/images/popular/pop-1.jpg')}}" width="164" height="152" alt=""/> </div>
                         <div class="col-sm-11  col-md-12 ">
                           <h4>The evolution of the apple ..</h4>
                           <div class="text-danger sub-info">
@@ -957,55 +552,6 @@
                             <div class="comments"><span class="ion-chatbubbles icon"></span>351</div>
                             <div class="stars"><span class="ion-ios7-star"></span><span class="ion-ios7-star"></span><span class="ion-ios7-star"></span><span class="ion-ios7-star"></span><span class="ion-ios7-star-half"></span></div>
                           </div>
-                        </div>
-                      </div>
-                      </a> </li>
-                  </ul>
-                </div>
-                <div class="tab-pane" id="comments">
-                  <ul class="list-unstyled">
-                    <li> <a href="#">
-                      <div class="row">
-                        <div class="col-sm-5  col-md-4 "><img class="img-thumbnail pull-left" src="images/comments/com-1.jpg" width="164" height="152" alt=""/> </div>
-                        <div class="col-sm-11  col-md-12 ">
-                          <h4>Tellus Phasellus viverra nulla</h4>
-                          <p>Cum sociis natoque penatibus et magnis dis parturient montes..</p>
-                        </div>
-                      </div>
-                      </a> </li>
-                    <li> <a href="#">
-                      <div class="row">
-                        <div class="col-sm-5  col-md-4 "><img class="img-thumbnail pull-left" src="images/comments/com-2.jpg" width="164" height="152" alt=""/> </div>
-                        <div class="col-sm-11  col-md-12 ">
-                          <h4>The evolution of the apple ..</h4>
-                          <p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo..</p>
-                        </div>
-                      </div>
-                      </a> </li>
-                    <li> <a href="#">
-                      <div class="row">
-                        <div class="col-sm-5  col-md-4 "><img class="img-thumbnail pull-left" src="images/comments/com-3.jpg" width="164" height="152" alt=""/> </div>
-                        <div class="col-sm-11  col-md-12 ">
-                          <h4>The evolution of the apple ..</h4>
-                          <p>Donec pede justo, fringilla vel, aliquet nec vulputate..</p>
-                        </div>
-                      </div>
-                      </a> </li>
-                    <li> <a href="#">
-                      <div class="row">
-                        <div class="col-sm-5  col-md-4 "><img class="img-thumbnail pull-left" src="images/comments/com-4.jpg" width="164" height="152" alt=""/> </div>
-                        <div class="col-sm-12">
-                          <h4>The evolution of the apple ..</h4>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
-                        </div>
-                      </div>
-                      </a> </li>
-                    <li> <a href="#">
-                      <div class="row">
-                        <div class="col-sm-5  col-md-4 "><img class="img-thumbnail pull-left" src="images/comments/com-5.jpg" width="164" height="152" alt=""/> </div>
-                        <div class="col-sm-11  col-md-12 ">
-                          <h4>The evolution of the apple ..</h4>
-                          <p>Beatae vitae dicta sunt.explicabo ipsam..</p>
                         </div>
                       </div>
                       </a> </li>
@@ -1014,39 +560,6 @@
               </div>
             </div>
             <!-- activities end --> 
-            <!-- radio start -->
-            <div class="col-sm-16 bt-space wow fadeInUp animated" data-wow-delay="1s" data-wow-offset="100">
-              <div class="main-title-outer pull-left">
-                <div class="main-title">globalnews radio</div>
-              </div>
-              <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/172078992&amp;color=e74c3c&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
-            </div>
-            <!-- radio end --> 
-            
-            <!-- calendar start -->
-            <div class="col-sm-16 bt-space wow fadeInUp animated" data-wow-delay="1s" data-wow-offset="50">
-              <div class="single pull-left"></div>
-            </div>
-            <!-- calendar end --> 
-            <!-- flicker imgs start -->
-            <div class="col-sm-16 bt-space wow fadeInUp animated" data-wow-delay="1s" data-wow-offset="35">
-              <div class="main-title-outer pull-left">
-                <div class="main-title">flicker images</div>
-              </div>
-              <ul class="list-inline">
-                <li><a href="https://flic.kr/p/pGKEzR" target="_blank"><img class="img-responsive" src="https://farm4.staticflickr.com/3944/15557385115_2d191a5cc7_s.jpg" width="55" height="55" alt=""/></a></li>
-                <li><a href="https://flic.kr/p/pq5PiE" target="_blank"><img class="img-responsive" src="https://farm4.staticflickr.com/3956/15368741148_ef02d92a65_s.jpg" width="55" height="55" alt=""/></a></li>
-                <li><a href="https://flic.kr/p/pq9rDD" target="_blank"><img class="img-responsive" src="https://farm6.staticflickr.com/5608/15369448747_fd3f69cbb7_s.jpg" width="55" height="55" alt=""/></a></li>
-                <li><a href="https://flic.kr/p/pGM4yz" target="_blank"><img class="img-responsive" src="https://farm4.staticflickr.com/3946/15557657525_da199f6917_s.jpg" width="55" height="55" alt=""/></a></li>
-                <li><a href="https://flic.kr/p/pH6FJ4" target="_blank"><img class="img-responsive" src="https://farm4.staticflickr.com/3953/15561291195_e7ecf7d3a1_s.jpg" width="55" height="55" alt=""/></a></li>
-                <li><a href="https://flic.kr/p/pqoKFn" target="_blank"><img class="img-responsive" src="https://farm4.staticflickr.com/3953/15372240967_9ee086188c_s.jpg" width="55" height="55" alt=""/></a></li>
-                <li><a href="https://flic.kr/p/pGHh6g" target="_blank"><img class="img-responsive" src="https://farm4.staticflickr.com/3944/15556919225_c7d99f9667_s.jpg" width="55" height="55" alt=""/></a></li>
-                <li><a href="https://flic.kr/p/pqxJZC" target="_blank"><img class="img-responsive" src="https://farm4.staticflickr.com/3939/15373994670_8c756abcb0_s.jpg" width="55" height="55" alt=""/></a></li>
-                <li><a href="https://flic.kr/p/pEPtj9" target="_blank"><img class="img-responsive" src="https://farm4.staticflickr.com/3938/15535494656_d04ef318a0_s.jpg" width="55" height="55" alt=""/></a></li>
-                <li><a href="https://flic.kr/p/pqjpxX" target="_blank"><img class="img-responsive" src="https://farm6.staticflickr.com/5605/15371392809_5069f8772d_s.jpg" width="55" height="55" alt=""/></a></li>
-              </ul>
-            </div>
-            <!-- flicker imgs end --> 
           </div>
         </div>
       </div>
@@ -1237,36 +750,36 @@
 <!-- wrapper end --> 
 
 <!-- jQuery --> 
-<script src="js/jquery.min.js"></script> 
+<script src="{{asset('front/js/jquery.min.js')}}"></script> 
 <!--jQuery easing--> 
-<script src="js/jquery.easing.1.3.js"></script> 
+<script src="{{asset('front/js/jquery.easing.1.3.js')}}"></script> 
 <!-- bootstrab js --> 
-<script src="js/bootstrap.js"></script> 
+<script src="{{asset('front/js/bootstrap.js')}}"></script> 
 <!--style switcher--> 
-<script src="js/style-switcher.js"></script> <!--wow animation--> 
-<script src="js/wow.min.js"></script> 
+<script src="{{asset('front/js/style-switcher.js')}}"></script> <!--wow animation--> 
+<script src="{{asset('front/js/wow.min.js')}}"></script> 
 <!-- time and date --> 
-<script src="js/moment.min.js"></script> 
+<script src="{{asset('front/js/moment.min.js')}}"></script> 
 <!--news ticker--> 
-<script src="js/jquery.ticker.js"></script> 
+<script src="{{asset('front/js/jquery.ticker.js')}}"></script> 
 <!-- owl carousel --> 
-<script src="js/owl.carousel.js"></script> 
+<script src="{{asset('front/js/owl.carousel.js')}}"></script> 
 <!-- magnific popup --> 
-<script src="js/jquery.magnific-popup.js"></script> 
+<script src="{{asset('front/js/jquery.magnific-popup.js')}}"></script> 
 <!-- weather --> 
-<script src="js/jquery.simpleWeather.min.js"></script> 
+<script src="{{asset('front/js/jquery.simpleWeather.min.js')}}"></script> 
 <!-- calendar--> 
-<script src="js/jquery.pickmeup.js"></script> 
+<script src="{{asset('front/js/jquery.pickmeup.js')}}"></script> 
 <!-- go to top --> 
-<script src="js/jquery.scrollUp.js"></script> 
+<script src="{{asset('front/js/jquery.scrollUp.js')}}"></script> 
 <!-- scroll bar --> 
-<script src="js/jquery.nicescroll.js"></script> 
-<script src="js/jquery.nicescroll.plus.js"></script> 
+<script src="{{asset('front/js/jquery.nicescroll.js')}}"></script> 
+<script src="{{asset('front/js/jquery.nicescroll.plus.js')}}"></script> 
 <!--masonry--> 
-<script src="js/masonry.pkgd.js"></script> 
+<script src="{{asset('front/js/masonry.pkgd.js')}}"></script> 
 <!--media queries to js--> 
-<script src="js/enquire.js"></script> 
+<script src="{{asset('front/js/enquire.js')}}"></script> 
 <!--custom functions--> 
-<script src="js/custom-fun.js"></script>
+<script src="{{asset('front/js/custom-fun.js')}}"></script>
 </body>
 </html>
