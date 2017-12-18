@@ -27,7 +27,7 @@ class DashboardController extends Controller
         {
             $kt[$v->id]=$v;
         }
-        //$vis=Visitor::log(); 
+        Visitor::log(); 
         //$ip=$vis->ip;
         // $article=new Article;
         // $article->addVisit();
