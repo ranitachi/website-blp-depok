@@ -1,17 +1,17 @@
 @extends('front.layouts.master')
 
 @section('title')
-  <title>Profil - Unit Layanan Pengadaan Pemerintah Kota Depok</title>
+  <title>Visi Misi - Unit Layanan Pengadaan Pemerintah Kota Depok</title>
 @endsection
 
 @section('content')
 <!-- bage header Start -->
   <div class="container">
     <div class="page-header">
-      <h1>Profil ULP</h1>
+      <h1>Visi Misi ULP</h1>
       <ol class="breadcrumb">
         <li><a href="{{route('front.homeindex')}}">Beranda</a></li>
-        <li class="active">Profil</li>
+        <li class="active">Visi Misi</li>
       </ol>
     </div>
   </div>
@@ -31,9 +31,9 @@
                     <div class="col-sm-16 sec-info">
                       <div class="text-danger sub-info-bordered">
                         <div class="time"><span class="ion-android-data icon"></span>Dec 9 2014</div>
-                        <div class="comments"><span class="ion-chatbubbles icon"></span>{{$profile->view}}</div>
+                        <div class="comments"><span class="ion-chatbubbles icon"></span>{{$visimisi->view}}</div>
                       </div>
-                      {!! $profile->desc !!}
+                      {!! $visimisi->desc !!}
                     </div>
                   </div>
                 </div>

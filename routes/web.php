@@ -51,5 +51,7 @@ Route::get('slider-data/{id}', 'SliderController@data')->name('slider.data');
 
 Route::get('/', 'FrontHomeController@index')->name('front.homeindex');
 Route::get('/profil-ulp', 'FrontProfileController@index')->name('front.profileindex');
+Route::get('/visi-misi-ulp', 'FrontVisiMisiController@index')->name('front.visimisi');
+Route::get('/struktur-organisasi-ulp', 'FrontStrukturOrgController@index')->name('front.strukturorg');
 
 // -------------- FRONT END
