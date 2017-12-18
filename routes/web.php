@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('front.pages.index');
-});
-
 Auth::routes();
 //Route::get('/home', 'HomeController@index')->name('home');
 
@@ -49,3 +45,18 @@ Route::get('kontak-data/{id}', 'KontakController@data')->name('kontak.data');
 
 Route::resource('slider','SliderController');
 Route::get('slider-data/{id}', 'SliderController@data')->name('slider.data');
+
+
+// -------------- FRONT END
+
+Route::get('/', 'FrontHomeController@index')->name('front.homeindex');
+Route::get('/profil-ulp', 'FrontProfileController@index')->name('front.profileindex');
+Route::get('/visi-misi-ulp', 'FrontVisiMisiController@index')->name('front.visimisi');
+Route::get('/struktur-organisasi-ulp', 'FrontStrukturOrgController@index')->name('front.strukturorg');
+Route::get('/dokumentasi-foto', 'FrontFotoController@index')->name('front.foto');
+Route::get('/dokumentasi-video', 'FrontVideoController@index')->name('front.video');
+Route::get('/kategori-berita/{id}', 'FrontBeritaByKatController@index')->name('front.newsbycat');
+Route::get('/kontak-lembaga', 'FrontKontakLembagaController@index')->name('front.kontak');
+Route::get('/detail-berita/{id}', 'FrontBeritaController@index')->name('front.berita');
+
+// -------------- FRONT END

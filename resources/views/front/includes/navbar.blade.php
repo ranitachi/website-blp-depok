@@ -3,7 +3,7 @@
     <!-- header start -->
     <div class="container header">
       <div class="row">
-        <div class="col-sm-5 col-md-5 wow fadeInUpLeft animated"><a class="navbar-brand" href="index.html">globalnews</a></div>
+        <div class="col-sm-5 col-md-5"><a class="navbar-brand"></a></div>
       </div>
     </div>
     <!-- header end --> 
@@ -20,13 +20,27 @@
               </div>
               <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav text-uppercase main-nav ">
-                  <li class="active"><a href="index.html">beranda</a></li>
-                  <li> <a href="javascript:void(0)">profil</a></li>
-                  <li> <a href="javascript:void(0)">visi misi</a></li>
-                  <li> <a href="javascript:void(0)">struktur organisasi</a></li>
-                  <li> <a href="javascript:void(0)">dokumentasi</a></li>
-                  <li> <a href="javascript:void(0)">berita</a></li>                  
-                  <li> <a href="javascript:void(0)">kontak lembaga</a></li>
+                  <li class="active"><a href="{{route('front.homeindex')}}">beranda</a></li>
+                  <li> <a href="{{route('front.profileindex')}}">profil</a></li>
+                  <li> <a href="{{route('front.visimisi')}}">visi misi</a></li>
+                  <li> <a href="{{route('front.strukturorg')}}">struktur organisasi</a></li>
+                  <li class="dropdown"> <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">dokumentasi<span class="ion-ios7-arrow-down nav-icn"></span></a>
+                    <ul class="dropdown-menu text-capitalize" role="menu">
+                      <li><a href="{{route('front.foto')}}"><span class="ion-ios7-arrow-right nav-sub-icn"></span>foto</a></li>
+                      <li><a href="{{route('front.video')}}"><span class="ion-ios7-arrow-right nav-sub-icn"></span>video</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown"> <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">berita<span class="ion-ios7-arrow-down nav-icn"></span></a>
+                    <ul class="dropdown-menu text-capitalize" role="menu">
+                      @php
+                        $kategori = \App\Model\Kategori::get();
+                      @endphp
+                      @foreach($kategori as $item)
+                        <li><a href="{{route('front.newsbycat', $item->id)}}"><span class="ion-ios7-arrow-right nav-sub-icn"></span>{{$item->nama_kategori}}</a></li>
+                      @endforeach
+                    </ul>
+                  </li>                 
+                  <li> <a href="{{route('front.kontak')}}">kontak lembaga</a></li>
                 </ul>
               </div>
             </div>

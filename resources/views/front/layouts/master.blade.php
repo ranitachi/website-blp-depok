@@ -5,11 +5,6 @@
     @include('front.includes.headstyle')
 </head>
 <body>
-<!-- preloader start -->
-<div id="preloader">
-  <div id="status"></div>
-</div>
-<!-- preloader end --> 
 
 <!-- wrapper start -->
 <div class="wrapper"> 

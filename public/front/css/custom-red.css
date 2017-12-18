@@ -616,8 +616,8 @@ blockquote p {
 	padding-bottom: 20px;
 }
 .navbar-brand {
-	width: 190px;
-	height: 46px;
+	width: 100%;
+	height: 60px;
 	margin-top: 5px;
 	text-indent: 100%;
 	white-space: nowrap;
@@ -652,7 +652,7 @@ blockquote p {
 	margin-bottom: 0;
 }
 .navbar-inverse {
-	background-color: #3d566e;
+	background-color: #204d78;
 	border-top: none;
 	border-bottom: 3px solid #e74c3c;
 	border-right: none;
@@ -1995,10 +1995,10 @@ table-bordered th, .table-bordered td {
 footer {
 	border-top: 3px solid #e74c3c;
 	margin: 20px 0 10px 0;
-	background-color: #3d566e;
+	background-color: #204d78;
 }
 footer .top-sec {
-	background-color: #3d566e;
+	background-color: #204d78;
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
