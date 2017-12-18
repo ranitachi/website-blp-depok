@@ -24,8 +24,22 @@
                   <li> <a href="{{route('front.profileindex')}}">profil</a></li>
                   <li> <a href="{{route('front.visimisi')}}">visi misi</a></li>
                   <li> <a href="{{route('front.strukturorg')}}">struktur organisasi</a></li>
-                  <li> <a href="javascript:void(0)">dokumentasi</a></li>
-                  <li> <a href="javascript:void(0)">berita</a></li>                  
+                  <li class="dropdown"> <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">dokumentasi<span class="ion-ios7-arrow-down nav-icn"></span></a>
+                    <ul class="dropdown-menu text-capitalize" role="menu">
+                      <li><a href="{{route('front.foto')}}"><span class="ion-ios7-arrow-right nav-sub-icn"></span>foto</a></li>
+                      <li><a href="{{route('front.video')}}"><span class="ion-ios7-arrow-right nav-sub-icn"></span>video</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown"> <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">berita<span class="ion-ios7-arrow-down nav-icn"></span></a>
+                    <ul class="dropdown-menu text-capitalize" role="menu">
+                      @php
+                        $kategori = \App\Model\Kategori::get();
+                      @endphp
+                      @foreach($kategori as $item)
+                        <li><a href="#"><span class="ion-ios7-arrow-right nav-sub-icn"></span>{{$item->nama_kategori}}</a></li>
+                      @endforeach
+                    </ul>
+                  </li>                 
                   <li> <a href="javascript:void(0)">kontak lembaga</a></li>
                 </ul>
               </div>

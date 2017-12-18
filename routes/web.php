@@ -53,5 +53,7 @@ Route::get('/', 'FrontHomeController@index')->name('front.homeindex');
 Route::get('/profil-ulp', 'FrontProfileController@index')->name('front.profileindex');
 Route::get('/visi-misi-ulp', 'FrontVisiMisiController@index')->name('front.visimisi');
 Route::get('/struktur-organisasi-ulp', 'FrontStrukturOrgController@index')->name('front.strukturorg');
+Route::get('/dokumentasi-foto', 'FrontFotoController@index')->name('front.foto');
+Route::get('/dokumentasi-video', 'FrontVideoController@index')->name('front.video');
 
 // -------------- FRONT END
