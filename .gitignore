@@ -3,6 +3,7 @@
 /public/storage
 /public/upload
 /storage/*.key
+/storage/geo/*.mmdb
 /vendor
 /.idea
 /.vagrant
