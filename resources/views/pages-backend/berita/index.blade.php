@@ -19,7 +19,7 @@
         </ul>
     </div>
     <!-- END PAGE HEADING -->
-
+    {{Counter::showAndCount('berita')}}
     <!-- START PAGE CONTAINER -->
     <div class="container">
         <div class="block block-condensed">
