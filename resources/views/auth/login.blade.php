@@ -38,7 +38,7 @@
                             {{ csrf_field() }}
                             
                             <div class="form-group">
-                                <input type="text" class="form-control" name="nip" placeholder="NIP">
+                                <input type="text" class="form-control" name="email" placeholder="NIP">
                             </div>
                             <div class="form-group">
                                 <input type="password" class="form-control" name="password" placeholder="Password">
@@ -54,6 +54,7 @@
                     </div>
                     <div class="app-login-box-footer">
                         &copy; Simanda 2017. All rights reserved.
+                        {{$errors}}
                     </div>
                 </div>
                                 

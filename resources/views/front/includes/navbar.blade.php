@@ -20,8 +20,8 @@
               </div>
               <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav text-uppercase main-nav ">
-                  <li class="active"><a href="index.html">beranda</a></li>
-                  <li> <a href="javascript:void(0)">profil</a></li>
+                  <li class="active"><a href="{{route('front.homeindex')}}">beranda</a></li>
+                  <li> <a href="{{route('front.profileindex')}}">profil</a></li>
                   <li> <a href="javascript:void(0)">visi misi</a></li>
                   <li> <a href="javascript:void(0)">struktur organisasi</a></li>
                   <li> <a href="javascript:void(0)">dokumentasi</a></li>

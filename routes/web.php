@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('front.pages.index');
-});
-
 Auth::routes();
 //Route::get('/home', 'HomeController@index')->name('home');
 
@@ -49,3 +45,11 @@ Route::get('kontak-data/{id}', 'KontakController@data')->name('kontak.data');
 
 Route::resource('slider','SliderController');
 Route::get('slider-data/{id}', 'SliderController@data')->name('slider.data');
+
+
+// -------------- FRONT END
+
+Route::get('/', 'FrontHomeController@index')->name('front.homeindex');
+Route::get('/profil-ulp', 'FrontProfileController@index')->name('front.profileindex');
+
+// -------------- FRONT END
