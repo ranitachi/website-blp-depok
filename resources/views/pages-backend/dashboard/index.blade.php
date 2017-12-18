@@ -38,9 +38,9 @@
                                         <div class="title">Data Berita</div>
                                         <div class="subtitle pull-right text-success"><span class="fa fa-check"></span> Ok</div>
                                     </div>                                        
-                                    <div class="intval text-left">22</div>
+                                    <div class="intval text-left">{{count($berita)}}</div>
                                     <div class="line">
-                                        <div class="subtitle"><a href="22">Dalam Jumlah Total</a></div>
+                                        <div class="subtitle"><a href="{{URL::to('berita')}}">Dalam Jumlah Total</a></div>
                                     </div>
                                 </div>
                             </div>                                            
@@ -71,7 +71,7 @@
                                            
                                         </div>
                                     </div>                                        
-                                    <div class="intval text-left">22</div>                                        
+                                    <div class="intval text-left">{{count($foto)}}</div>                                        
                                     <div class="line">
                                         <div class="subtitle"><a href="#">Dalam Jumlah Total</a></div>
                                     </div>
@@ -98,7 +98,7 @@
                                         <div class="title">Dokumentasi Video </div>
                                         <div class="subtitle pull-right text-success"><span class="fa fa-check"></span> Ok</div>
                                     </div>                                        
-                                    <div class="intval text-left">33</div>
+                                    <div class="intval text-left">{{count($video)}}</div>
                                     <div class="line">
                                         <div class="subtitle"><a href="#">Dalam Jumlah Total</a></div>
                                     </div>
@@ -125,7 +125,7 @@
                                         <div class="title">User</div>
                                         <div class="subtitle pull-right text-success"><span class="fa fa-check"></span> Ok</div>
                                     </div>                                        
-                                    <div class="intval text-left">44</div>
+                                    <div class="intval text-left">1</div>
                                     <div class="line">
                                         <div class="subtitle"><a href="#">Dalam Jumlah Total</a></div>
                                     </div>
@@ -181,6 +181,10 @@
                         </thead>
                         <tbody>
                         @foreach($berita as $k => $v)
+                            @php
+                                if($k==5)
+                                    break;
+                            @endphp
                             <tr>
                                 <th>{{($k+1)}}</th>
                                 <th><a href="{{URL::to('berita/'.$v->id)}}">{{$v->title}}</a></th>
