@@ -35,7 +35,7 @@
                                 </div>
                                 <div class="col-sm-8">                                                    
                                     <div class="line">
-                                        <div class="title">Paket Lelang</div>
+                                        <div class="title">Data Berita</div>
                                         <div class="subtitle pull-right text-success"><span class="fa fa-check"></span> Ok</div>
                                     </div>                                        
                                     <div class="intval text-left">22</div>
@@ -59,15 +59,15 @@
                             <div class="row">
                                 <div class="col-sm-4">
                                     <div class="icon icon-lg">
-                                        <span class="fa fa-calendar"></span>
+                                        <span class="fa fa-image"></span>
                                     </div>
                                 </div>
                                 <div class="col-sm-8">                                                    
                                     <div class="line">
-                                        <div class="title text-success">Data Rapat</div>         
+                                        <div class="title text-primary">Dokumentasi Foto</div>         
                                         <div class="title pull-right">
                                             
-                                                <span class="label label-warning label-ghost label-bordered">33 Menunggu</span>
+                                               <div class="subtitle pull-right text-success"><span class="fa fa-check"></span> Ok</div>
                                            
                                         </div>
                                     </div>                                        
@@ -90,12 +90,13 @@
                             <div class="row">
                                 <div class="col-sm-4">
                                     <div class="icon icon-lg">
-                                        <span class="icon-apartment"></span>
+                                        <span class="fa fa-youtube-play"></span>
                                     </div>
                                 </div>
                                 <div class="col-sm-8">                                                    
                                     <div class="line">
-                                        <div class="title">Jumlah Perusahaan</div>
+                                        <div class="title">Dokumentasi Video </div>
+                                        <div class="subtitle pull-right text-success"><span class="fa fa-check"></span> Ok</div>
                                     </div>                                        
                                     <div class="intval text-left">33</div>
                                     <div class="line">
@@ -121,7 +122,7 @@
                                 </div>
                                 <div class="col-sm-8">                                                    
                                     <div class="line">
-                                        <div class="title">Tenaga Ahli</div>
+                                        <div class="title">User</div>
                                         <div class="subtitle pull-right text-success"><span class="fa fa-check"></span> Ok</div>
                                     </div>                                        
                                     <div class="intval text-left">44</div>
@@ -143,11 +144,18 @@
                     <!-- HEADING -->
                     <div class="app-heading app-heading-small">                                        
                         <div class="title">
-                            <h2>Visualisasi Data</h2>
+                            <h2>Statistik Pengunjung Web</h2>
                         </div>                 
                     </div>
                     <div id="canvas-holder" style="width:100%">
-                        <canvas id="chart-area" />
+                        <!--<canvas id="chart-area" />-->
+                        <div class="block-content">
+                                        <div class="app-chart-wrapper app-chart-with-axis">
+                                            <div id="yaxis" class="app-chart-yaxis"></div>
+                                            <div class="app-chart-holder" id="dashboard-chart-line" style="height: 325px;"></div>
+                                            <div id="xaxis" class="app-chart-xaxis"></div>
+                                        </div>
+                                    </div>
                     </div>
                 </div>
                 
@@ -157,24 +165,36 @@
                     <!-- HEADING -->
                     <div class="app-heading app-heading-small">                                        
                         <div class="title">
-                            <h2>Informasi Paket Lelang Anda</h2>
-                            <p>Berikut adalah tabel informasi paket lelang anda.</p>
+                            <h2>Data Berita Terbaru</h2>
+                           
                         </div>                 
                     </div>
                     <table class="table table-striped" style="font-size:11px;">
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Nama Pekerjaan</th>
-                                <th>Nilai Pagu</th>
-                                <th>Nilai HPS</th>
-                                <th>Status</th>
+                                <th>Judul</th>
+                                <th>Tanggal</th>
+                                <th>Kategori</th>
+                                <th>Jlh View</th>
                             </tr>
                         </thead>
                         <tbody>
-                            
+                        @foreach($berita as $k => $v)
+                            <tr>
+                                <th>{{($k+1)}}</th>
+                                <th><a href="{{URL::to('berita/'.$v->id)}}">{{$v->title}}</a></th>
+                                <th>
+                                    {{date('d/m/Y', strtotime($v->created_at))}}<br>
+                                    {{date('H:i:s', strtotime($v->created_at))}}
+                                </th>
+                                <th><span class="label label-success label-bordered">{{$kat[$v->id_kategori]->nama_kategori}}</span></th>
+                                <th><span class="label label-primary label-bordered">{{$v->view}}</span></th>
+                            </tr>
+                        @endforeach
                         </tbody>
                     </table>
+                    <div class="pull-right"><a href="{{URL::to('berita')}}" class="btn btn-xs btn-shadowed btn-primary">Selengkapnya</a></div>
                 </div>
             </div>
         </div>
@@ -184,6 +204,8 @@
 
 @section('pagescripts')    
     <script src="{{asset('/chartjs/Chart.bundle.js')}}"></script>
+    <script type="text/javascript" src="{{asset('theme/js/vendor/rickshaw/d3.v3.js')}}"></script>
+    <script type="text/javascript" src="{{asset('theme/js/vendor/rickshaw/rickshaw.min.js')}}"></script>
     <script>
           
     </script>
