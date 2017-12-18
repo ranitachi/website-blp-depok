@@ -36,11 +36,11 @@
                         $kategori = \App\Model\Kategori::get();
                       @endphp
                       @foreach($kategori as $item)
-                        <li><a href="#"><span class="ion-ios7-arrow-right nav-sub-icn"></span>{{$item->nama_kategori}}</a></li>
+                        <li><a href="{{route('front.newsbycat', $item->id)}}"><span class="ion-ios7-arrow-right nav-sub-icn"></span>{{$item->nama_kategori}}</a></li>
                       @endforeach
                     </ul>
                   </li>                 
-                  <li> <a href="javascript:void(0)">kontak lembaga</a></li>
+                  <li> <a href="{{route('front.kontak')}}">kontak lembaga</a></li>
                 </ul>
               </div>
             </div>

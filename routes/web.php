@@ -55,5 +55,7 @@ Route::get('/visi-misi-ulp', 'FrontVisiMisiController@index')->name('front.visim
 Route::get('/struktur-organisasi-ulp', 'FrontStrukturOrgController@index')->name('front.strukturorg');
 Route::get('/dokumentasi-foto', 'FrontFotoController@index')->name('front.foto');
 Route::get('/dokumentasi-video', 'FrontVideoController@index')->name('front.video');
+Route::get('/kategori-berita/{id}', 'FrontBeritaByKatController@index')->name('front.newsbycat');
+Route::get('/kontak-lembaga', 'FrontKontakLembagaController@index')->name('front.kontak');
 
 // -------------- FRONT END

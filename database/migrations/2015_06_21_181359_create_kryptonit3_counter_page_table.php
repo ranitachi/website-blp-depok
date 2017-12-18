@@ -14,7 +14,7 @@ class CreateKryptonit3CounterPageTable extends Migration
     {
         Schema::create('kryptonit3_counter_page', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('page')->unique();
+            $table->string('page');
         });
     }
 
