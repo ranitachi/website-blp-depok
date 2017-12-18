@@ -38,7 +38,7 @@
                             {{ csrf_field() }}
                             
                             <div class="form-group">
-                                <input type="text" class="form-control" name="email" placeholder="NIP">
+                                <input type="text" class="form-control" name="nip" placeholder="NIP">
                             </div>
                             <div class="form-group">
                                 <input type="password" class="form-control" name="password" placeholder="Password">
