@@ -6,7 +6,7 @@
         #gmap_canvas img{max-width:none!important;background:none!important}
     </style>
 @endsection
-
+{{Counter::showAndCount('kontak')}}
 @section('content')
 <!-- bage header Start -->
 <div class="container">

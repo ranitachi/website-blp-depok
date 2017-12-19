@@ -3,7 +3,7 @@
 @section('title')
   <title>Berita Berdasarkan Kategori - Unit Layanan Pengadaan Pemerintah Kota Depok</title>
 @endsection
-
+{{Counter::showAndCount('newbycategories')}}
 @section('content')
 <div class="container"> 
     

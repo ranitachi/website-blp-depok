@@ -3,7 +3,7 @@
 @section('title')
   <title>Dokumentasi Video - Unit Layanan Pengadaan Pemerintah Kota Depok</title>
 @endsection
-
+{{Counter::showAndCount('video')}}
 @section('content')
 <div class="container"> 
     

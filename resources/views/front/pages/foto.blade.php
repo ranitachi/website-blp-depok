@@ -3,7 +3,7 @@
 @section('title')
   <title>Dokumentasi Foto - Unit Layanan Pengadaan Pemerintah Kota Depok</title>
 @endsection
-
+{{Counter::showAndCount('foto')}}
 @section('content')
 <div class="container"> 
     

@@ -3,7 +3,7 @@
 @section('title')
   <title>Profil - Unit Layanan Pengadaan Pemerintah Kota Depok</title>
 @endsection
-
+{{Counter::showAndCount('profile')}}
 @section('content')
 <!-- bage header Start -->
   <div class="container">
