@@ -45,7 +45,7 @@
                 <span class="icon-cog"></span>
             </div>
             <div class="title">
-                <h2>Simanda 2017</h2>              
+                <h2>BLP Official Website 2017</h2>              
                 <p>Copyrights ® Pemkot Depok, 2017</p>
             </div>                                
         </div>

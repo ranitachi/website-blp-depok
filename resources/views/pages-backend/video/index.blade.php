@@ -1,7 +1,7 @@
 @extends('layouts.master-backend')
 
 @section('title')
-    <title>Dokumentasi Video - Simanda 2017</title>
+    <title>Dokumentasi Video - BLP Official Website 2017</title>
 @endsection
 
 @section('content')

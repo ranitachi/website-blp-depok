@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>                        
-        <title>Halaman Login - Simanda 2017</title>            
+        <title>Halaman Login - BLP Official Website 2017</title>            
         
         <!-- META SECTION -->
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -27,10 +27,10 @@
                 <div class="app-login-box">                                        
                     <div class="text-center" style="margin:30px auto;">
                         <img style="height:100px;float:none;" src="{{ asset('theme/img/logo-depok.png') }}">
-                        <img style="height:100px;float:none;" src="{{ asset('theme/img/simanda-logo.png') }}">
+                        
                     </div>
                     <div class="app-login-box-title">
-                        <div class="title">Simanda 2017</div>
+                        <div class="title">Official Website BLP</div>
                         <div class="subtitle">Silahkan lakukan login</div>                        
                     </div>
                     <div class="app-login-box-container">
@@ -38,7 +38,7 @@
                             {{ csrf_field() }}
                             
                             <div class="form-group">
-                                <input type="text" class="form-control" name="email" placeholder="NIP">
+                                <input type="text" class="form-control" name="nip" placeholder="NIP">
                             </div>
                             <div class="form-group">
                                 <input type="password" class="form-control" name="password" placeholder="Password">
@@ -53,7 +53,7 @@
                         </form>
                     </div>
                     <div class="app-login-box-footer">
-                        &copy; Simanda 2017. All rights reserved.
+                        &copy; BLP Kta Depok 2017. All rights reserved.
                         {{$errors}}
                     </div>
                 </div>

@@ -3,8 +3,10 @@
 @section('title')
   <title>Detail Berita - Unit Layanan Pengadaan Pemerintah Kota Depok</title>
 @endsection
-
 @section('content')
+@php
+    Counter::showAndCount('detail');
+@endphp
     <!-- sticky header end -->
   <div class="container">
     <div class="page-header">

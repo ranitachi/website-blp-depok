@@ -6,8 +6,10 @@
         #gmap_canvas img{max-width:none!important;background:none!important}
     </style>
 @endsection
-
 @section('content')
+@php
+    Counter::showAndCount('kontak');
+@endphp
 <!-- bage header Start -->
 <div class="container">
     <div class="page-header">

@@ -3,9 +3,10 @@
 @section('title')
   <title>Selamat Datang - Unit Layanan Pengadaan Pemerintah Kota Depok</title>
 @endsection
-
 @section('content')
-<div class="container">
+@php
+    Counter::showAndCount('index');
+@endphp<div class="container">
     <div class="row"> 
       <!-- hot news start -->
       <div class="col-sm-16 hot-news hidden-xs">
