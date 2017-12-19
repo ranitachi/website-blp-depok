@@ -1,7 +1,7 @@
 @extends('layouts.master-backend')
 
 @section('title')
-    <title>Form Kategori - Simanda 2017</title>
+    <title>Form Kategori - BLP Official Website 2017</title>
 @endsection
 
 @section('content')

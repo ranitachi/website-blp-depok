@@ -3,8 +3,10 @@
 @section('title')
   <title>Berita Berdasarkan Kategori - Unit Layanan Pengadaan Pemerintah Kota Depok</title>
 @endsection
-{{Counter::showAndCount('newbycategories')}}
 @section('content')
+@php
+    Counter::showAndCount('newbycategories');
+@endphp
 <div class="container"> 
     
     <!-- bage header start -->

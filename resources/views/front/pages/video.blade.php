@@ -3,8 +3,10 @@
 @section('title')
   <title>Dokumentasi Video - Unit Layanan Pengadaan Pemerintah Kota Depok</title>
 @endsection
-{{Counter::showAndCount('video')}}
 @section('content')
+@php
+    Counter::showAndCount('video');
+@endphp
 <div class="container"> 
     
     <!-- bage header start -->

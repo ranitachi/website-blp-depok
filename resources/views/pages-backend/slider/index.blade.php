@@ -1,7 +1,7 @@
 @extends('layouts.master-backend')
 
 @section('title')
-    <title>Data Slider - Simanda 2017</title>
+    <title>Data Slider - BLP Official Website 2017</title>
 @endsection
 
 @section('content')

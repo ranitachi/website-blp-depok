@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>                        
-        <title>Halaman Login - Simanda 2017</title>            
+        <title>Halaman Login - BLP Official Website 2017</title>            
         
         <!-- META SECTION -->
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">

@@ -1,7 +1,7 @@
 @extends('layouts.master-backend')
 
 @section('title')
-    <title>Berita - Simanda 2017</title>
+    <title>Berita - BLP Official Website 2017</title>
 @endsection
 
 @section('content')
@@ -19,7 +19,7 @@
         </ul>
     </div>
     <!-- END PAGE HEADING -->
-    {{Counter::showAndCount('berita')}}
+    
     <!-- START PAGE CONTAINER -->
     <div class="container">
         <div class="block block-condensed">

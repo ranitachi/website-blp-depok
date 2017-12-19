@@ -3,8 +3,10 @@
 @section('title')
   <title>Struktur Organisasi - Unit Layanan Pengadaan Pemerintah Kota Depok</title>
 @endsection
-{{Counter::showAndCount('strukturorganisasi')}}
 @section('content')
+@php
+    Counter::showAndCount('strukturorganisasi');
+@endphp
 <!-- bage header Start -->
   <div class="container">
     <div class="page-header">
