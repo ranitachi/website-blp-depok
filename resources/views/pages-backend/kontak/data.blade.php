@@ -55,7 +55,7 @@
             </div>
           @php
             $id=$data[0]->id;
-            list($lat,$long)=explode(';',$data[0]->maps);
+            list($lat,$long)=explode(',',$data[0]->maps);
             $alamat=$data[0]->alamat;
           @endphp
         @else
