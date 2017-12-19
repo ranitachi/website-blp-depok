@@ -53,7 +53,7 @@
                         </form>
                     </div>
                     <div class="app-login-box-footer">
-                        &copy; BLP Kta Depok 2017. All rights reserved.
+                        &copy; BLP Kota Depok 2017. All rights reserved.
                         {{$errors}}
                     </div>
                 </div>
