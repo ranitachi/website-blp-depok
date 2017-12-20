@@ -11,7 +11,7 @@
 <!-- ionicons font -->
 <link href="{{asset('front/css/ionicons.min.css')}}" rel="stylesheet">
 <!-- animation styles -->
-<link rel="stylesheet" href="{{asset('front/')}}css/animate.css" />
+<link rel="stylesheet" href="{{asset('front/css/animate.css')}}" />
 <!-- custom styles -->
 <link href="{{asset('front/css/custom-red.css')}}" rel="stylesheet" id="style">
 <!-- owl carousel styles-->
