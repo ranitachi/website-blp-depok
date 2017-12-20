@@ -38,7 +38,7 @@
                 <div class="overlay"></div>
                 <div class="overlay-info">
                   <div class="cat">
-                    <p class="cat-data"><span class="ion-model-s"></span>{{$item->title}}</p>
+                    <p class="cat-data"><span class="ion-navicon-round"></span>{{$item->title}}</p>
                   </div>
                 </div>
                 </a></div>

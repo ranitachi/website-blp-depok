@@ -37,9 +37,7 @@
                         <div class="time"><span class="ion-android-data icon"></span>{{ \Carbon\Carbon::parse($newsdetail->created_at)->toFormattedDateString() }}</div>
                         <div class="comments"><span class="ion-chatbubbles icon"></span>{{$newsdetail->view}}</div>
                       </div>
-                      
                         {!! str_replace(array('\\n','\\r'), ' ',$newsdetail->desc) !!}
-
                     </div>
                   </div>
                 </div>
@@ -68,7 +66,7 @@
                   <ul class="list-unstyled">
                     @foreach($latestnews as $i => $item)
                       @if($i<5)
-                      <li> <a href="#">
+                      <li> <a href="{{route('front.berita', $item->id)}}">
                         <div class="row">
                           <div class="col-sm-5 col-md-4"><img class="img-thumbnail pull-left" src="{{url('/')}}{{$item->file}}" width="164" style="max-height:54px" alt=""/> </div>
                           <div class="col-sm-11 col-md-12">
@@ -100,7 +98,7 @@
                   <ul class="list-unstyled">
                     @foreach($popularnews as $i => $item)
                       @if($i<5)
-                      <li> <a href="#">
+                      <li> <a href="{{route('front.berita', $item->id)}}">
                         <div class="row">
                           <div class="col-sm-5 col-md-4"><img class="img-thumbnail pull-left" src="{{url('/')}}{{$item->file}}" width="164" style="max-height:54px" alt=""/> </div>
                           <div class="col-sm-11 col-md-12">
