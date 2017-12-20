@@ -22,11 +22,23 @@
                 @if($i<3)
                   <li> <a href="{{route('front.berita', $item->id)}}">
                   <div class="row">
-                    <div class="col-sm-4"><img class="img-thumbnail pull-left" src="{{url('/')}}{{$item->file}}" width="70" height="70" alt=""/> </div>
+                    <div class="col-sm-4"><img class="img-thumbnail pull-left" src="{{url('/')}}{{$item->file}}" width="70" style="max-height:50px" alt=""/> </div>
                     <div class="col-sm-12">
-                      <h4>{{$item->title}}</h4>
+                      <h4>
+                        @php
+                            $isititle = explode(' ', $item->title);
+                        @endphp
+                        @if(count($isititle) > 3)
+                            @for($i = 0; $i <= 3; $i++)
+                                {{ $isititle[$i] }}
+                            @endfor
+                            ...
+                        @else
+                          {{ $item->title }}
+                        @endif
+                      </h4>
                       <div class="f-sub-info">
-                        <div class="time"><span class="ion-android-data icon"></span>Dec 16 2014</div>
+                        <div class="time"><span class="ion-android-data icon"></span>{{ \Carbon\Carbon::parse($item->created_at)->toFormattedDateString() }}</div>
                         <div class="comments"><span class="ion-chatbubbles icon"></span>{{$item->view}}</div>
                       </div>
                     </div>
@@ -43,11 +55,23 @@
                 @if($i<3)
                   <li> <a href="{{route('front.berita', $item->id)}}">
                   <div class="row">
-                    <div class="col-sm-4"><img class="img-thumbnail pull-left" src="{{url('/')}}{{$item->file}}" width="70" height="70" alt=""/> </div>
+                    <div class="col-sm-4"><img class="img-thumbnail pull-left" src="{{url('/')}}{{$item->file}}" width="70" style="max-height:50px" alt=""/> </div>
                     <div class="col-sm-12">
-                      <h4>{{$item->title}}</h4>
+                      <h4>
+                        @php
+                            $isititle = explode(' ', $item->title);
+                        @endphp
+                        @if(count($isititle) > 3)
+                            @for($i = 0; $i <= 3; $i++)
+                                {{ $isititle[$i] }}
+                            @endfor
+                            ...
+                        @else
+                          {{ $item->title }}
+                        @endif
+                      </h4>
                       <div class="f-sub-info">
-                        <div class="time"><span class="ion-android-data icon"></span>Dec 16 2014</div>
+                        <div class="time"><span class="ion-android-data icon"></span>{{ \Carbon\Carbon::parse($item->created_at)->toFormattedDateString() }}</div>
                         <div class="comments"><span class="ion-chatbubbles icon"></span>{{$item->view}}</div>
                       </div>
                     </div>

@@ -12,7 +12,10 @@ class FrontBeritaController extends Controller
     {
         $getlatestnews = Berita::orderby('created_at', 'desc')->limit(10)->get();
         $getpopularnews = Berita::orderby('view')->limit(5)->get();
+        
         $getnewsdetail = Berita::find($id);
+        $getnewsdetail->view = $getnewsdetail->view + 1;
+        $getnewsdetail->save();
 
         return view('front.pages.detail')
             ->with('newsdetail', $getnewsdetail)
