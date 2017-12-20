@@ -38,7 +38,7 @@
                         <div class="comments"><span class="ion-chatbubbles icon"></span>{{$newsdetail->view}}</div>
                       </div>
                       
-                        {!! $newsdetail->desc !!}
+                        {!! str_replace(array('\\n','\\r'), ' ',$newsdetail->desc) !!}
 
                     </div>
                   </div>

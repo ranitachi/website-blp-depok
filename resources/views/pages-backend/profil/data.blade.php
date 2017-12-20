@@ -4,7 +4,7 @@
       <label class="control-label col-lg-4"><h2>{{str_replace('-',' ',strtoupper($category))}}</h2></label>
       <div class="col-lg-12">
         @if (count($profil)!=0)
-          {!! $profil[0]->desc !!}
+          {!! str_replace(array('\\n','\\r'), ' ',$profil[0]->desc) !!}
           {{-- <pre>
             {{print_r($profil)}}
           </pre> --}}

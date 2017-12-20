@@ -72,7 +72,7 @@
                                             </a>
                                             <div class="tile-content tile-content-condensed-bottom text-center">
                                                 <span class="tile-subtitle">{{$tgl}}</span>
-                                                <h5 class="tile-title">{{$vv->title}}a</h5>
+                                                <h5 class="tile-title">{{$vv->title}}</h5>
                                             </div>
                                         </div>
                                     </div>

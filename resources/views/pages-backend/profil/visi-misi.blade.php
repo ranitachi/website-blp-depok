@@ -1,21 +1,21 @@
 @extends('layouts.master-backend')
 
 @section('title')
-    <title>Profil Lembaga - BLP Official Website 2017</title>
+    <title>Visi Misi - BLP Official Website 2017</title>
 @endsection
 
 @section('content')
     <!-- START PAGE HEADING -->
     <div class="app-heading app-heading-bordered app-heading-page">
         <div class="title">
-            <h1>Profil Lembaga</h1>
-            <p>Berikut Adalah Halaman untuk manajemen Profil Lembaga.</p>
+            <h1>Visi Misi</h1>
+            <p>Berikut Adalah Halaman untuk manajemen Visi Misi.</p>
         </div>               
     </div>
     <div class="app-heading-container app-heading-bordered bottom">
         <ul class="breadcrumb">
             <li><a href="#">Dashboard</a></li>
-            <li class="active">Profil Lembaga</li>
+            <li class="active">Visi Misi</li>
         </ul>
     </div>
     <!-- END PAGE HEADING -->
@@ -26,7 +26,7 @@
             <!-- START HEADING -->
             <div class="app-heading app-heading-small">
                 <div class="title">
-                    <h2>Profil Lembaga</h2>
+                    <h2>Visi Misi</h2>
                 </div>
                 
                               

@@ -35,7 +35,7 @@
                         <div class="time"><span class="ion-android-data icon"></span>Dec 9 2014</div>
                         <div class="comments"><span class="ion-chatbubbles icon"></span>{{$profile->view}}</div>
                       </div>
-                      {!! $profile->desc !!}
+                      {!! str_replace(array('\\n','\\r'), ' ',$profile->desc ) !!}
                     </div>
                   </div>
                 </div>

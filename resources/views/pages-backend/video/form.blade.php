@@ -9,7 +9,7 @@
     <div class="app-heading app-heading-bordered app-heading-page">
         <div class="title">
             <h1>Form Dokumentasi Video</h1>
-            <p>Berikut Adalah Halaman untuk manajemen Kategori.</p>
+            <p>Berikut Adalah Halaman untuk manajemen Dokumentasi Video.</p>
         </div>               
     </div>
     <div class="app-heading-container app-heading-bordered bottom">

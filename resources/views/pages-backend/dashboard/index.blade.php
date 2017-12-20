@@ -73,7 +73,7 @@
                                     </div>                                        
                                     <div class="intval text-left">{{count($foto)}}</div>                                        
                                     <div class="line">
-                                        <div class="subtitle"><a href="#">Dalam Jumlah Total</a></div>
+                                        <div class="subtitle"><a href="{{URL::to('foto')}}">Dalam Jumlah Total</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -100,7 +100,7 @@
                                     </div>                                        
                                     <div class="intval text-left">{{count($video)}}</div>
                                     <div class="line">
-                                        <div class="subtitle"><a href="#">Dalam Jumlah Total</a></div>
+                                        <div class="subtitle"><a href="{{URL::to('video')}}">Dalam Jumlah Total</a></div>
                                     </div>
                                 </div>
                             </div>                                            
