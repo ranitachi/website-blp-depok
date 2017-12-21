@@ -11,8 +11,9 @@
         "kryptonit3/counter": "5.2.*",
         "laravel/framework": "5.5.*",
         "laravel/tinker": "~1.0",
+        "nesbot/carbon": "^1.22",
         "unisharp/laravel-filemanager": "~1.8",
-	"weboap/visitor":"^2.0"        
+        "weboap/visitor": "^2.0"
     },
     "require-dev": {
         "filp/whoops": "~2.0",

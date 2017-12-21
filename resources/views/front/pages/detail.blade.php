@@ -34,12 +34,10 @@
                     <div class="col-sm-16 sec-info">
                       <h3>{{$newsdetail->title}}</h3>
                       <div class="text-danger sub-info-bordered">
-                        <div class="time"><span class="ion-android-data icon"></span>Dec 9 2014</div>
+                        <div class="time"><span class="ion-android-data icon"></span>{{ \Carbon\Carbon::parse($newsdetail->created_at)->toFormattedDateString() }}</div>
                         <div class="comments"><span class="ion-chatbubbles icon"></span>{{$newsdetail->view}}</div>
                       </div>
-                      
                         {!! str_replace(array('\\n','\\r'), ' ',$newsdetail->desc) !!}
-
                     </div>
                   </div>
                 </div>
@@ -68,13 +66,25 @@
                   <ul class="list-unstyled">
                     @foreach($latestnews as $i => $item)
                       @if($i<5)
-                      <li> <a href="#">
+                      <li> <a href="{{route('front.berita', $item->id)}}">
                         <div class="row">
-                          <div class="col-sm-5 col-md-4"><img class="img-thumbnail pull-left" src="{{url('/')}}{{$item->file}}" width="164" height="152" alt=""/> </div>
+                          <div class="col-sm-5 col-md-4"><img class="img-thumbnail pull-left" src="{{url('/')}}{{$item->file}}" width="164" style="max-height:54px" alt=""/> </div>
                           <div class="col-sm-11 col-md-12">
-                            <h4>{{$item->title}}</h4>
+                            <h4>
+                              @php
+                                  $isititle = explode(' ', $item->title);
+                              @endphp
+                              @if(count($isititle) > 8)
+                                  @for($i = 0; $i <= 8; $i++)
+                                      {{ $isititle[$i] }}
+                                  @endfor
+                                  ...
+                              @else
+                                {{ $item->title }}
+                              @endif
+                            </h4>
                             <div class="text-danger sub-info">
-                              <div class="time"><span class="ion-android-data icon"></span>Dec 16 2014</div>
+                              <div class="time"><span class="ion-android-data icon"></span>{{ \Carbon\Carbon::parse($item->created_at)->toFormattedDateString() }}</div>
                               <div class="comments"><span class="ion-eye icon"></span>{{$item->view}}</div>
                             </div>
                           </div>
@@ -88,13 +98,25 @@
                   <ul class="list-unstyled">
                     @foreach($popularnews as $i => $item)
                       @if($i<5)
-                      <li> <a href="#">
+                      <li> <a href="{{route('front.berita', $item->id)}}">
                         <div class="row">
-                          <div class="col-sm-5 col-md-4"><img class="img-thumbnail pull-left" src="{{url('/')}}{{$item->file}}" width="164" height="152" alt=""/> </div>
+                          <div class="col-sm-5 col-md-4"><img class="img-thumbnail pull-left" src="{{url('/')}}{{$item->file}}" width="164" style="max-height:54px" alt=""/> </div>
                           <div class="col-sm-11 col-md-12">
-                            <h4>{{$item->title}}</h4>
+                            <h4>
+                              @php
+                                  $isititle = explode(' ', $item->title);
+                              @endphp
+                              @if(count($isititle) > 8)
+                                  @for($i = 0; $i <= 8; $i++)
+                                      {{ $isititle[$i] }}
+                                  @endfor
+                                  ...
+                              @else
+                                {{ $item->title }}
+                              @endif
+                            </h4>
                             <div class="text-danger sub-info">
-                              <div class="time"><span class="ion-android-data icon"></span>Dec 16 2014</div>
+                              <div class="time"><span class="ion-android-data icon"></span>{{ \Carbon\Carbon::parse($item->created_at)->toFormattedDateString() }}</div>
                               <div class="comments"><span class="ion-eye icon"></span>{{$item->view}}</div>
                             </div>
                           </div>
