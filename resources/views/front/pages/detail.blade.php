@@ -5,7 +5,7 @@
 @endsection
 @section('content')
 @php
-    Counter::showAndCount('detail');
+    Counter::showAndCount('detail',$newsdetail->id);
 @endphp
     <!-- sticky header end -->
   <div class="container">

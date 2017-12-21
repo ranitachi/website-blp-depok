@@ -43,6 +43,9 @@ Route::post('foto-status/{id}', 'FotoController@fotostatus');
 Route::resource('kontak','KontakController');
 Route::get('kontak-data/{id}', 'KontakController@data')->name('kontak.data');
 
+Route::resource('stat','StatController');
+Route::get('stat-data/{bln}/{thn}', 'StatController@data')->name('stat.data');
+
 Route::resource('slider','SliderController');
 Route::get('slider-data/{id}', 'SliderController@data')->name('slider.data');
 

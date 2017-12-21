@@ -59,7 +59,7 @@
                             <div class="row">
                                 <div class="col-sm-4">
                                     <div class="icon icon-lg">
-                                        <span class="fa fa-image"></span>
+                                        <span class="fa fa-camera-retro"></span>
                                     </div>
                                 </div>
                                 <div class="col-sm-8">                                                    
@@ -117,17 +117,17 @@
                             <div class="row">
                                 <div class="col-sm-4">
                                     <div class="icon icon-lg">
-                                        <span class="icon-users"></span>
+                                        <span class="icon-picture"></span>
                                     </div>
                                 </div>
                                 <div class="col-sm-8">                                                    
                                     <div class="line">
-                                        <div class="title">User</div>
+                                        <div class="title">Slider</div>
                                         <div class="subtitle pull-right text-success"><span class="fa fa-check"></span> Ok</div>
                                     </div>                                        
-                                    <div class="intval text-left">1</div>
+                                    <div class="intval text-left">{{count($slider)}}</div>
                                     <div class="line">
-                                        <div class="subtitle"><a href="#">Dalam Jumlah Total</a></div>
+                                        <div class="subtitle"><a href="{{URL::to('slider')}}">Dalam Jumlah Total</a></div>
                                     </div>
                                 </div>
                             </div>                                            
@@ -150,15 +150,29 @@
                     <div id="canvas-holder" style="width:100%">
                         <!--<canvas id="chart-area" />-->
                         <div class="block-content">
-                                        <div class="app-chart-wrapper app-chart-with-axis">
-                                            <div id="yaxis" class="app-chart-yaxis"></div>
-                                            <div class="app-chart-holder" id="dashboard-chart-line" style="height: 325px;"></div>
-                                            <div id="xaxis" class="app-chart-xaxis"></div>
-                                        </div>
-                                    </div>
+                            <canvas id="myChart" width="400" height="300"></canvas>               
+                        </div>
                     </div>
                 </div>
                 
+@php
+    $tgl=$data='';
+    for($i=1;$i<=$jlhhari;$i++)
+    {
+        $wkt=date('Y-m-d',strtotime($tahun.'-'.$bulan.'-'.$i));
+        $tgl.="$i,";
+        if(isset($vis[$wkt]))
+        {
+                $data.=count($vis[$wkt]).',';
+        }
+        else
+            $data.='0,';
+    }
+    $tgl=substr($tgl,0,-1);
+    $data=substr($data,0,-1);
+    //dd($vis);    
+@endphp
+
             </div>
             <div class="col-md-6">
                 <div class="block">
@@ -210,7 +224,34 @@
     <script src="{{asset('/chartjs/Chart.bundle.js')}}"></script>
     <script type="text/javascript" src="{{asset('theme/js/vendor/rickshaw/d3.v3.js')}}"></script>
     <script type="text/javascript" src="{{asset('theme/js/vendor/rickshaw/rickshaw.min.js')}}"></script>
-    <script>
-          
-    </script>
+<script>
+    var ctx = document.getElementById("myChart").getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: [{{$tgl}}],
+            datasets: [{
+                label: '# Jumlah Pengunjung {{bulan($bulan)}} - {{$tahun}} ',
+                data: [{{$data}}],
+                backgroundColor: [
+                              'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero:true
+                    }
+                }]
+            }
+        }
+    });
+    
+</script>
 @endsection
