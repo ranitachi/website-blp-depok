@@ -1,21 +1,21 @@
 @extends('layouts.master-backend')
 
 @section('title')
-    <title>Berita - BLP Official Website 2017</title>
+    <title>Data User - BLP Official Website 2017</title>
 @endsection
 
 @section('content')
     <!-- START PAGE HEADING -->
     <div class="app-heading app-heading-bordered app-heading-page">
         <div class="title">
-            <h1>Berita</h1>
-            <p>Berikut Adalah Halaman untuk manajemen Berita.</p>
+            <h1>Data User</h1>
+            <p>Berikut Adalah Halaman untuk manajemen Data User.</p>
         </div>               
     </div>
     <div class="app-heading-container app-heading-bordered bottom">
         <ul class="breadcrumb">
             <li><a href="#">Dashboard</a></li>
-            <li class="active">Berita</li>
+            <li class="active">Data User</li>
         </ul>
     </div>
     <!-- END PAGE HEADING -->
@@ -26,13 +26,16 @@
             <!-- START HEADING -->
             <div class="app-heading app-heading-small">
                 <div class="title">
-                    <h2>Berita</h2>
+                    <h2>Data User</h2>
                 </div>
                 <div class="heading-elements">
-                    <a href="{{ URL::to('/berita/-1') }}" class="btn btn-primary btn-shadowed btn-xs">
+                @if(Auth::user()->level==0)
+                    
+                    <a href="{{ URL::to('/user/-1') }}" class="btn btn-primary btn-shadowed btn-xs">
                         <span class="fa fa-plus"></span>&nbsp;&nbsp;
-                        Tambah Data Berita
+                        Tambah Data Data User
                     </a>
+                @endif
                 </div>
                               
             </div>
@@ -83,86 +86,41 @@
                     timeout:3000
                 });
             }
-
-            
         });
         function loaddata()
         {
             $('#loader').show();
-            $('#data').load(APP_URL+'/berita-data/-1',function(){
+            $('#data').load(APP_URL+'/user-data/-1',function(){
                 $('#loader').hide();
-                $('#table-berita').dataTable();
+                $('#table-user').dataTable();
                 if($(".switch").length > 0){
                     $(".switch").each(function(){
                         $(this).append("<span></span>");
                     });
                 }
-                $('input.switch').click(function(){
-                    var st=$(this).is(':checked');
-                    var id=$(this).val();
-                    
-                    if(st==true)
-                        var sts=1;
-                    else
-                        var sts=0;
-
-                    $.ajax({
-                        url: APP_URL+'/berita-status/'+id+'/'+sts, 
-                        dataType: 'json'
-                    }).done(function(data){
-                        var txt = "Status Data Berita Berhasil Di Edit";
-                        noty({
-                            text: "<strong>Informasi</strong>"+txt,
-                            type: 'information',
-                            layout: 'topRight',
-                            animation: {
-                                open: 'animated bounceIn',
-                                close: 'animated fadeOut',                    
-                                speed: 400
-                            },
-                            progressBar:true,
-                            timeout:3000
-                        });
-                            
-                    }).fail(function(){
-                        var txt = "Status Data Berita Gagal Di Edit";
-                        noty({
-                            text: "<strong>Informasi</strong>"+txt,
-                            type: 'error',
-                            layout: 'topRight',
-                            animation: {
-                                open: 'animated bounceIn',
-                                close: 'animated fadeOut',                    
-                                speed: 400
-                            },
-                            progressBar:true,
-                            timeout:3000
-                        });
-                    });
-                    //alert(st);
-                });
+                
             });
         }
         
         function edit(id)
         {
-            location.href=APP_URL+'/berita/'+id;
+            location.href=APP_URL+'/user/'+id;
         }
 
         function hapus(id)
         {
             $('#modal-primary-header').text('Peringatan');
-            $('#modal-primary-body').html('<h2>Yakin ingin Menghapus Data Berita Ini ?</h2>');
+            $('#modal-primary-body').html('<h2>Yakin ingin Menghapus Data User Ini ?</h2>');
             $('div#modal-primary').modal('show');
             $('#ok').click(function(){
                 $.ajax({
-                    url: APP_URL+'/berita/'+id,
+                    url: APP_URL+'/user/'+id,
                     type : 'DELETE',
                     dataType: 'json',
                     headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
                     data: {"_token": "{{ csrf_token() }}"}
                 }).done(function(data){
-                    var txt = "Data Berita Berhasil Di Hapus";
+                    var txt = "Data Data User Berhasil Di Hapus";
                     noty({
                         text: "<strong>Informasi</strong>"+txt,
                         type: 'information',
@@ -179,7 +137,7 @@
                     loaddata();
 
                 }).fail(function(){
-                    var txt = " Data Berita Gagal Di Hapus";
+                    var txt = " Data Data User Gagal Di Hapus";
                     noty({
                         text: "<strong>Informasi</strong>"+txt,
                         type: 'error',

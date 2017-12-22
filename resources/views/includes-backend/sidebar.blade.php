@@ -71,6 +71,10 @@
 				<a href="{{ URL::to('stat') }}" class="{{(strpos($path,'stat')!==false ? 'active' : '')}}" class="">
 					<span class="nav-icon-circle">SK</span> Stat Kunjungan</a>
 			</li>
+			<li>
+				<a href="{{ URL::to('user') }}" class="{{(strpos($path,'user')!==false ? 'active' : '')}}" class="">
+					<span class="nav-icon-circle">SK</span> Data User</a>
+			</li>
 
 			<li class="title">BLP &nbsp;//&nbsp; Copyrights &reg; Pemkot Depok, 2017</li>
 		</ul>

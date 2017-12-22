@@ -54,4 +54,11 @@ class SliderController extends Controller
     Slider::find($id)->delete();
     return response()->json(['done']);
   }
+
+  public function sliderstatus($id,$st)
+    {
+        $dt['flag']=$st;
+        $edit=Slider::find($id)->update($dt);
+        return response()->json($edit);
+    }
 }

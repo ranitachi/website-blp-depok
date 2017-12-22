@@ -95,7 +95,50 @@
                         $(this).append("<span></span>");
                     });
                 }
-                
+                $('input.switch').click(function(){
+                    var st=$(this).is(':checked');
+                    var id=$(this).val();
+                    
+                    if(st==true)
+                        var sts=1;
+                    else
+                        var sts=0;
+
+                    $.ajax({
+                        url: APP_URL+'/slider-status/'+id+'/'+sts, 
+                        dataType: 'json'
+                    }).done(function(data){
+                        var txt = "Status Data Slider Berhasil Di Edit";
+                        noty({
+                            text: "<strong>Informasi</strong>"+txt,
+                            type: 'information',
+                            layout: 'topRight',
+                            animation: {
+                                open: 'animated bounceIn',
+                                close: 'animated fadeOut',                    
+                                speed: 400
+                            },
+                            progressBar:true,
+                            timeout:3000
+                        });
+                            
+                    }).fail(function(){
+                        var txt = "Status Data Slider Gagal Di Edit";
+                        noty({
+                            text: "<strong>Informasi</strong>"+txt,
+                            type: 'error',
+                            layout: 'topRight',
+                            animation: {
+                                open: 'animated bounceIn',
+                                close: 'animated fadeOut',                    
+                                speed: 400
+                            },
+                            progressBar:true,
+                            timeout:3000
+                        });
+                    });
+                    //alert(st);
+                });
             });
         }
         

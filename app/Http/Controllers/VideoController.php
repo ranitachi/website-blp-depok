@@ -52,4 +52,11 @@ class VideoController extends Controller
         Video::find($id)->delete();
         return response()->json(['done']);
     }
+    
+    public function videostatus($id,$st)
+    {
+        $dt['flag']=$st;
+        $edit=Video::find($id)->update($dt);
+        return response()->json($edit);
+    }
 }

@@ -17,9 +17,10 @@ class BeritaController extends Controller
     {
         return view('pages-backend.berita.index');
     }
-    public function beritastatus(Request $request,$id)
+
+    public function beritastatus($id,$st)
     {
-        $dt=$request->all();
+        $dt['flag']=$st;
         $edit = Berita::find($id)->update($dt);
         return response()->json($edit);
         // dd($dt);

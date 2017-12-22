@@ -30,11 +30,15 @@ Route::post('kategori-status/{id}', 'KategoriController@status');
 
 Route::resource('berita','BeritaController');
 Route::get('berita-data/{id}', 'BeritaController@data')->name('berita.data');
-Route::post('berita-status/{id}', 'BeritaController@beritastatus');
+Route::get('berita-status/{id}/{st}', 'BeritaController@beritastatus');
 
 Route::resource('video','VideoController');
 Route::get('video-data/{id}', 'VideoController@data')->name('video.data');
-Route::post('video-status/{id}', 'VideoController@videostatus');
+Route::get('video-status/{id}/{st}', 'VideoController@videostatus');
+
+Route::resource('user','UserController');
+Route::get('user-data/{id}', 'UserController@data')->name('user.data');
+Route::post('user-status/{id}', 'UserController@user.tatus');
 
 Route::resource('foto','FotoController');
 Route::get('foto-data/{id}', 'FotoController@data')->name('foto.data');
@@ -48,7 +52,7 @@ Route::get('stat-data/{bln}/{thn}', 'StatController@data')->name('stat.data');
 
 Route::resource('slider','SliderController');
 Route::get('slider-data/{id}', 'SliderController@data')->name('slider.data');
-
+Route::get('slider-status/{id}/{st}', 'SliderController@sliderstatus');
 
 // -------------- FRONT END
 
