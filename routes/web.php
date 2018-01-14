@@ -55,6 +55,11 @@ Route::get('slider-data/{id}', 'SliderController@data')->name('slider.data');
 Route::get('slider-status/{id}/{st}', 'SliderController@sliderstatus');
 
 Route::get('web-rekanan', 'WebRekananController@index')->name('webrekanan.index');
+Route::get('web-rekanan/create', 'WebRekananController@create')->name('webrekanan.create');
+Route::post('web-rekanan/store', 'WebRekananController@store')->name('webrekanan.store');
+Route::get('web-rekanan/{id}/edit', 'WebRekananController@edit')->name('webrekanan.edit');
+Route::post('web-rekanan/{id}/update', 'WebRekananController@update')->name('webrekanan.update');
+Route::get('web-rekanan/{id}/delete', 'WebRekananController@destroy')->name('webrekanan.delete');
 
 // -------------- FRONT END
 

@@ -29,7 +29,7 @@
                     <h2>Web Rekanan</h2>
                 </div>
                 <div class="heading-elements">
-                    <a href="#" class="btn btn-primary btn-shadowed btn-xs">
+                    <a href="{{ route('webrekanan.create') }}" class="btn btn-primary btn-shadowed btn-xs">
                         <span class="fa fa-plus"></span>&nbsp;&nbsp;
                         Tambah Data Web Rekanan
                     </a>
@@ -50,7 +50,20 @@
                         </tr>
                     </thead>    
                     <tbody>
-                        
+                        @php
+                            $no=1;
+                        @endphp
+                        @foreach ($data as $item)
+                            <tr>
+                                <td style="width:30px;">{{ $no++ }}</td>
+                                <td><center><img src="{{ $item->image }}" style="max-height:100px;"></center></td>
+                                <td>{{ $item->nama_web }}</td>
+                                <td>
+                                    <a href="{{ route('webrekanan.edit', $item->id) }}" class="btn btn-xs btn-warning"><i class="fa fa-edit"></i></a>
+                                    <a href="{{ route('webrekanan.delete', $item->id) }}" class="btn btn-xs btn-danger"><i class="fa fa-trash"></i></a>
+                                </td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>  
                 </div>
