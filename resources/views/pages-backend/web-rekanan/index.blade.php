@@ -46,6 +46,7 @@
                             <th>No</th>
                             <th>Logo Web</th>
                             <th>Nama Web</th>
+                            <th>URL</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>    
@@ -58,6 +59,7 @@
                                 <td style="width:30px;">{{ $no++ }}</td>
                                 <td><center><img src="{{ $item->image }}" style="max-height:100px;"></center></td>
                                 <td>{{ $item->nama_web }}</td>
+                                <td>{{ $item->url }}</td>
                                 <td>
                                     <a href="{{ route('webrekanan.edit', $item->id) }}" class="btn btn-xs btn-warning"><i class="fa fa-edit"></i></a>
                                     <a href="{{ route('webrekanan.delete', $item->id) }}" class="btn btn-xs btn-danger"><i class="fa fa-trash"></i></a>

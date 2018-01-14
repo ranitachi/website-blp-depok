@@ -42,6 +42,12 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <label class="control-label col-lg-2">URL</label>
+                        <div class="col-lg-9">
+                        <input type="text" class="form-control" data-validation="required" placeholder="URL" name="url" id="url" autocomplete="off" value-"{{ $data->url }}">
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <label class="control-label col-lg-2">Logo Web</label>
                         <div class="col-lg-9">
                             <div class="input-group">

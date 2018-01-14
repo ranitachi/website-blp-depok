@@ -27,6 +27,7 @@ class WebRekananController extends Controller
         $set = new WebRekanan;
         $set->nama_web = $request->nama_web;
         $set->image = $request->image;
+        $set->url = $request->url;
         $set->save();
 
         return redirect()->route('webrekanan.index')->with('pesan', 'Berhasil memasukkan data web rekanan baru.');
@@ -46,6 +47,7 @@ class WebRekananController extends Controller
         $set = WebRekanan::find($id);
         $set->nama_web = $request->nama_web;
         $set->image = $request->image;
+        $set->url = $request->url;
         $set->save();
 
         return redirect()->route('webrekanan.index')->with('pesan', 'Berhasil mengubah data web rekanan.');

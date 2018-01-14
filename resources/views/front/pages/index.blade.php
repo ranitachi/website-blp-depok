@@ -262,26 +262,12 @@
             </div>
             <div class="row">
               <div id="owl-lifestyle" class="owl-carousel owl-theme lifestyle pull-left">
-                <div class="item topic"> <a href="#"> <img class="img-thumbnail" src="{{ asset('front/images/lifestyle/lifestyle-slide-1.jpg') }}" width="300" height="132" alt=""/>
-                  <h4>Etiam rhoncus. Maecenas tempus, tellus eget condimentum</h4>
-                  </a>
-                </div>
-                <div class="item topic"> <a href="#"> <img class="img-thumbnail" src="{{ asset('front/images/lifestyle/lifestyle-slide-1.jpg') }}" width="300" height="132" alt=""/>
-                  <h4>Etiam rhoncus. Maecenas tempus, tellus eget condimentum</h4>
-                  </a>
-                </div>
-                <div class="item topic"> <a href="#"> <img class="img-thumbnail" src="{{ asset('front/images/lifestyle/lifestyle-slide-1.jpg') }}" width="300" height="132" alt=""/>
-                  <h4>Etiam rhoncus. Maecenas tempus, tellus eget condimentum</h4>
-                  </a>
-                </div>
-                <div class="item topic"> <a href="#"> <img class="img-thumbnail" src="{{ asset('front/images/lifestyle/lifestyle-slide-1.jpg') }}" width="300" height="132" alt=""/>
-                  <h4>Etiam rhoncus. Maecenas tempus, tellus eget condimentum</h4>
-                  </a>
-                </div>
-                <div class="item topic"> <a href="#"> <img class="img-thumbnail" src="{{ asset('front/images/lifestyle/lifestyle-slide-1.jpg') }}" width="300" height="132" alt=""/>
-                  <h4>Etiam rhoncus. Maecenas tempus, tellus eget condimentum</h4>
-                  </a>
-                </div>
+                @foreach ($webrekanan as $item)
+                  <div class="item topic"> <a href="http://{{ $item->url }}" target="_blank"> <img class="img-thumbnail" src="{{ $item->image }}" width="300" height="132" alt=""/>
+                    <h4>{{ $item->nama_web }}</h4>
+                    </a>
+                  </div>
+                @endforeach
               </div>
             </div>
             <hr>

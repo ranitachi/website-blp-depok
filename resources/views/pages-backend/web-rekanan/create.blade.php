@@ -42,17 +42,23 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <label class="control-label col-lg-2">URL</label>
+                        <div class="col-lg-9">
+                        <input type="text" class="form-control" data-validation="required" placeholder="URL" name="url" id="url" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <label class="control-label col-lg-2">Logo Web</label>
                         <div class="col-lg-9">
                             <div class="input-group">
-                            <span class="input-group-btn">
-                                <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
-                                    <i class="fa fa-picture-o"></i> Choose
-                                </a>
-                            </span>
-                            <input id="thumbnail" readonly class="form-control" type="text" name="image">
-                        </div>
-                        <img id="holder" style="margin-top:15px;max-height:100px;">
+                                <span class="input-group-btn">
+                                    <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
+                                        <i class="fa fa-picture-o"></i> Choose
+                                    </a>
+                                </span>
+                                <input id="thumbnail" readonly class="form-control" type="text" name="image">
+                            </div>
+                            <img id="holder" style="margin-top:15px;max-height:100px;">
                         </div>
                     </div>
                     <div class="text-right">
