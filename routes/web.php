@@ -54,6 +54,8 @@ Route::resource('slider','SliderController');
 Route::get('slider-data/{id}', 'SliderController@data')->name('slider.data');
 Route::get('slider-status/{id}/{st}', 'SliderController@sliderstatus');
 
+Route::get('web-rekanan', 'WebRekananController@index')->name('webrekanan.index');
+
 // -------------- FRONT END
 
 Route::get('/', 'FrontHomeController@index')->name('front.homeindex');
