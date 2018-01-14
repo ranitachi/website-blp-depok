@@ -256,6 +256,37 @@
           </div>
           <!-- Scince & Travel end --> 
           
+          <div class="col-sm-16 wow fadeInUp animated " data-wow-delay="0.5s" data-wow-offset="100">
+            <div class="main-title-outer pull-left">
+              <div class="main-title">Website Rekanan</div>
+            </div>
+            <div class="row">
+              <div id="owl-lifestyle" class="owl-carousel owl-theme lifestyle pull-left">
+                <div class="item topic"> <a href="#"> <img class="img-thumbnail" src="{{ asset('front/images/lifestyle/lifestyle-slide-1.jpg') }}" width="300" height="132" alt=""/>
+                  <h4>Etiam rhoncus. Maecenas tempus, tellus eget condimentum</h4>
+                  </a>
+                </div>
+                <div class="item topic"> <a href="#"> <img class="img-thumbnail" src="{{ asset('front/images/lifestyle/lifestyle-slide-1.jpg') }}" width="300" height="132" alt=""/>
+                  <h4>Etiam rhoncus. Maecenas tempus, tellus eget condimentum</h4>
+                  </a>
+                </div>
+                <div class="item topic"> <a href="#"> <img class="img-thumbnail" src="{{ asset('front/images/lifestyle/lifestyle-slide-1.jpg') }}" width="300" height="132" alt=""/>
+                  <h4>Etiam rhoncus. Maecenas tempus, tellus eget condimentum</h4>
+                  </a>
+                </div>
+                <div class="item topic"> <a href="#"> <img class="img-thumbnail" src="{{ asset('front/images/lifestyle/lifestyle-slide-1.jpg') }}" width="300" height="132" alt=""/>
+                  <h4>Etiam rhoncus. Maecenas tempus, tellus eget condimentum</h4>
+                  </a>
+                </div>
+                <div class="item topic"> <a href="#"> <img class="img-thumbnail" src="{{ asset('front/images/lifestyle/lifestyle-slide-1.jpg') }}" width="300" height="132" alt=""/>
+                  <h4>Etiam rhoncus. Maecenas tempus, tellus eget condimentum</h4>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <hr>
+          </div>
+
         </div>
       </div>
       <!-- left sec end --> 
