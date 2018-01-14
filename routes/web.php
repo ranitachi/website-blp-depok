@@ -65,5 +65,6 @@ Route::get('/dokumentasi-video', 'FrontVideoController@index')->name('front.vide
 Route::get('/kategori-berita/{id}', 'FrontBeritaByKatController@index')->name('front.newsbycat');
 Route::get('/kontak-lembaga', 'FrontKontakLembagaController@index')->name('front.kontak');
 Route::get('/detail-berita/{id}', 'FrontBeritaController@index')->name('front.berita');
+Route::post('/search', 'SearchBeritaController@result')->name('search.result');
 
 // -------------- FRONT END

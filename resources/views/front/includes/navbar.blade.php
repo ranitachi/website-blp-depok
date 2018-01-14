@@ -51,8 +51,9 @@
         
         <div class="search-container ">
           <div class="container">
-            <form action="" method="" role="search">
-              <input id="search-bar" placeholder="Ketik dan tekan Enter..." autocomplete="off">
+            <form action="{{ route('search.result') }}" method="post" role="search">
+              {{ csrf_field() }}
+              <input id="search-bar" placeholder="Ketik dan tekan Enter..." autocomplete="off" name="keyword">
             </form>
           </div>
         </div>
