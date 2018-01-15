@@ -201,7 +201,7 @@
                             @endphp
                             <tr>
                                 <th>{{($k+1)}}</th>
-                                <th><a href="{{URL::to('berita/'.$v->id)}}">{{$v->title}}</a></th>
+                                <th><a href="{{URL::to('berita/'.$v->id)}}">{{substr($v->title,0,60)}}</a></th>
                                 <th>
                                     {{date('d/m/Y', strtotime($v->created_at))}}<br>
                                     {{date('H:i:s', strtotime($v->created_at))}}

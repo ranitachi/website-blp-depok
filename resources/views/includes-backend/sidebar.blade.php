@@ -73,6 +73,11 @@
 			</li>
 
 			<li>
+				<a href="{{ route('regulasi.index') }}" class="{{(strpos($path,'regulasi')!==false ? 'active' : '')}}" class="">
+					<span class="nav-icon-circle">DR</span> Data Regulasi</a>
+			</li>
+
+			<li>
 				<a href="{{ URL::to('stat') }}" class="{{(strpos($path,'stat')!==false ? 'active' : '')}}" class="">
 					<span class="nav-icon-circle">SK</span> Stat Kunjungan</a>
 			</li>

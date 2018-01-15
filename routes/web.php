@@ -32,6 +32,10 @@ Route::resource('berita','BeritaController');
 Route::get('berita-data/{id}', 'BeritaController@data')->name('berita.data');
 Route::get('berita-status/{id}/{st}', 'BeritaController@beritastatus');
 
+Route::resource('regulasi','RegulasiController');
+Route::get('regulasi-data/{id}', 'RegulasiController@data')->name('regulasi.data');
+Route::get('regulasi-status/{id}/{st}', 'RegulasiController@regulasistatus')->name('regulasi.status');
+
 Route::resource('video','VideoController');
 Route::get('video-data/{id}', 'VideoController@data')->name('video.data');
 Route::get('video-status/{id}/{st}', 'VideoController@videostatus');
@@ -71,6 +75,8 @@ Route::get('/dokumentasi-foto', 'FrontFotoController@index')->name('front.foto')
 Route::get('/dokumentasi-video', 'FrontVideoController@index')->name('front.video');
 Route::get('/kategori-berita/{id}', 'FrontBeritaByKatController@index')->name('front.newsbycat');
 Route::get('/kontak-lembaga', 'FrontKontakLembagaController@index')->name('front.kontak');
+Route::get('/data-regulasi', 'FrontRegulasiController@index')->name('front.regulasi');
+Route::get('/adddownload/{id}', 'FrontRegulasiController@adddownload')->name('front.adddownload');
 Route::get('/detail-berita/{id}', 'FrontBeritaController@index')->name('front.berita');
 Route::post('/search', 'SearchBeritaController@result')->name('search.result');
 

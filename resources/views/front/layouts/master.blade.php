@@ -51,4 +51,12 @@
 <!--custom functions--> 
 <script src="{{asset('front/js/custom-fun.js')}}"></script>
 </body>
+<script type="text/javascript">
+  var APP_URL = {!! json_encode(url('/')) !!}
+  $.ajaxSetup({
+			headers: {
+					'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+			}
+	});
+</script>
 </html>

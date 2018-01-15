@@ -41,6 +41,7 @@
                     </ul>
                   </li>                 
                   <li> <a href="{{route('front.kontak')}}">kontak lembaga</a></li>
+                  <li> <a href="{{route('front.regulasi')}}">data regulasi</a></li>
                 </ul>
               </div>
             </div>
