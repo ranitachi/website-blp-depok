@@ -68,6 +68,11 @@
 			</li>
 
 			<li>
+				<a href="{{ route('webrekanan.index') }}" class="{{(strpos($path,'web-rekanan')!==false ? 'active' : '')}}" class="">
+					<span class="nav-icon-circle">WR</span> Web Rekanan</a>
+			</li>
+
+			<li>
 				<a href="{{ URL::to('stat') }}" class="{{(strpos($path,'stat')!==false ? 'active' : '')}}" class="">
 					<span class="nav-icon-circle">SK</span> Stat Kunjungan</a>
 			</li>

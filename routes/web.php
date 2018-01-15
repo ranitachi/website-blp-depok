@@ -54,6 +54,13 @@ Route::resource('slider','SliderController');
 Route::get('slider-data/{id}', 'SliderController@data')->name('slider.data');
 Route::get('slider-status/{id}/{st}', 'SliderController@sliderstatus');
 
+Route::get('web-rekanan', 'WebRekananController@index')->name('webrekanan.index');
+Route::get('web-rekanan/create', 'WebRekananController@create')->name('webrekanan.create');
+Route::post('web-rekanan/store', 'WebRekananController@store')->name('webrekanan.store');
+Route::get('web-rekanan/{id}/edit', 'WebRekananController@edit')->name('webrekanan.edit');
+Route::post('web-rekanan/{id}/update', 'WebRekananController@update')->name('webrekanan.update');
+Route::get('web-rekanan/{id}/delete', 'WebRekananController@destroy')->name('webrekanan.delete');
+
 // -------------- FRONT END
 
 Route::get('/', 'FrontHomeController@index')->name('front.homeindex');
@@ -65,5 +72,6 @@ Route::get('/dokumentasi-video', 'FrontVideoController@index')->name('front.vide
 Route::get('/kategori-berita/{id}', 'FrontBeritaByKatController@index')->name('front.newsbycat');
 Route::get('/kontak-lembaga', 'FrontKontakLembagaController@index')->name('front.kontak');
 Route::get('/detail-berita/{id}', 'FrontBeritaController@index')->name('front.berita');
+Route::post('/search', 'SearchBeritaController@result')->name('search.result');
 
 // -------------- FRONT END

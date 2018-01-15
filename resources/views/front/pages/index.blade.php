@@ -256,6 +256,23 @@
           </div>
           <!-- Scince & Travel end --> 
           
+          <div class="col-sm-16 wow fadeInUp animated " data-wow-delay="0.5s" data-wow-offset="100">
+            <div class="main-title-outer pull-left">
+              <div class="main-title">Website Rekanan</div>
+            </div>
+            <div class="row">
+              <div id="owl-lifestyle" class="owl-carousel owl-theme lifestyle pull-left">
+                @foreach ($webrekanan as $item)
+                  <div class="item topic"> <a href="http://{{ $item->url }}" target="_blank"> <img class="img-thumbnail" src="{{ $item->image }}" width="300" height="132" alt=""/>
+                    <h4>{{ $item->nama_web }}</h4>
+                    </a>
+                  </div>
+                @endforeach
+              </div>
+            </div>
+            <hr>
+          </div>
+
         </div>
       </div>
       <!-- left sec end --> 
