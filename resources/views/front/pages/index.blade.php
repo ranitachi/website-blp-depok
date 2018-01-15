@@ -272,6 +272,21 @@
             </div>
             <hr>
           </div>
+          <div class="col-sm-16 wow fadeInUp animated " data-wow-delay="0.5s" data-wow-offset="100">
+            <div class="main-title-outer pull-left">
+              <div class="main-title">Manual SI-MANDA PBJ</div>
+            </div>
+            <div class="row">
+              <div id="" class="pull-left">
+                  <div class="item topic">
+                    <a href="{{asset('files/manual-si-manda-pbj.pdf')}}" target="_blank"> <img class="img-thumbnail" src="{{ asset('theme/img/icons/pdf.png') }}" width="100" height="100" alt=""/>
+                    <h4>Unduh</h4>
+                    </a>
+                  </div>
+              </div>
+            </div>
+            <hr>
+          </div>
 
         </div>
       </div>
