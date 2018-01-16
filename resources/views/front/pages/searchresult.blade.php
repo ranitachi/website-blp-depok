@@ -71,6 +71,9 @@
             @endforeach
 
           </div>
+          <div class="text-center">
+            {{ $result->appends(request()->input())->links() }}
+          </div>
         </div>
         <!-- left sec End --> 
         <!-- right sec Start -->
