@@ -1,7 +1,7 @@
 @extends('front.layouts.master')
 
 @section('title')
-    <title>Kontak Lembaga - Unit Layanan Pengadaan Pemerintah Kota Depok</title>
+    <title>Kontak Kami - Unit Layanan Pengadaan Pemerintah Kota Depok</title>
     <style>
         #gmap_canvas img{max-width:none!important;background:none!important}
     </style>
@@ -13,10 +13,10 @@
 <!-- bage header Start -->
 <div class="container">
     <div class="page-header">
-      <h1>Kontak Lembaga </h1>
+      <h1>Kontak Kami </h1>
       <ol class="breadcrumb">
       <li><a href="{{route('front.homeindex')}}">Beranda</a></li>
-      <li class="active">Kontak Lembaga</li>
+      <li class="active">Kontak Kami</li>
       </ol>
     </div>
   </div>
