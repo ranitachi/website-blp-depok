@@ -258,7 +258,7 @@
           
           <div class="col-sm-16 wow fadeInUp animated " data-wow-delay="0.5s" data-wow-offset="100">
             <div class="main-title-outer pull-left">
-              <div class="main-title">Website Rekanan</div>
+              <div class="main-title">Website Terkait</div>
             </div>
             <div class="row">
               <div id="owl-lifestyle" class="owl-carousel owl-theme lifestyle pull-left">
