@@ -36,3 +36,10 @@
 th { font-size: 12px !important; padding:6px 10px !important}
 td { font-size: 11px !important; padding:6px 10px !important}
 </style>
+
+<script>
+  $(".view").click(function(){
+      var path = $(this).data('value')
+      $('#pdf-embed').attr('src', "{{url('/')}}/"+path)
+  })
+</script>

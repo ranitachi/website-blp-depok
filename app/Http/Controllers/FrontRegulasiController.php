@@ -12,12 +12,14 @@ class FrontRegulasiController extends Controller
     {
         $getlatestnews = Berita::orderby('created_at', 'desc')->limit(10)->get();
         $getpopularnews = Berita::orderby('view')->limit(5)->get();
-        $getnewsbycat = Regulasi::orderby('created_at', 'desc')->get();
+        $getnewsbycat = Regulasi::orderby('created_at', 'desc')->paginate(8);
+
         return view('front.pages.regulasi-index')
              ->with('newsbycat', $getnewsbycat)
             ->with('popularnews', $getpopularnews)
             ->with('latestnews', $getlatestnews);
     }
+
     public function adddownload($id)
     {
         $reg=Regulasi::find($id);

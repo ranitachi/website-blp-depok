@@ -39,14 +39,14 @@
                     $id = $matches[1];
                     $width = '100%';
                     $height = '250px';
-                    $video='<iframe id="ytplayer" type="text/html" width="'.$width.'" height="'.$height.'"
+                    $videos='<iframe id="ytplayer" type="text/html" width="'.$width.'" height="'.$height.'"
                             src="https://www.youtube.com/embed/'.$id.'?rel=0&showinfo=0&color=white&iv_load_policy=3"
                             frameborder="0" allowfullscreen></iframe> ';
                 }
                 else
-                    $video='';
+                    $videos='';
                 @endphp
-                {!! $video !!}
+                {!! $videos !!}
                 <div class="sec-info">
                     <h3>{{$item->title}}</h3>
                     <div class="text-danger sub-info-bordered">
@@ -56,6 +56,9 @@
                 </a>
                 </div>
             @endforeach
+          </div>
+          <div class="text-center">
+            {{ $video->links() }}
           </div>
         </div>
         <!-- left sec end --> 

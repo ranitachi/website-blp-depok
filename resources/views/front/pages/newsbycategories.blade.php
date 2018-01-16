@@ -71,6 +71,9 @@
             @endforeach
             
           </div>
+          <div class="text-center">
+            {{ $newsbycat->links() }}
+          </div>
         </div>
         <!-- left sec end --> 
         

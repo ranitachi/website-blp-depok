@@ -15,7 +15,7 @@ class FrontVideoController extends Controller
     {
         $getlatestnews = Berita::orderby('created_at', 'desc')->limit(10)->get();
         $getpopularnews = Berita::orderby('view')->limit(5)->get();
-        $getvideo = Video::all();
+        $getvideo = Video::paginate(10);
 
         return view('front.pages.video')
             ->with('video', $getvideo)

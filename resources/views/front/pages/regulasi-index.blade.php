@@ -31,7 +31,7 @@
             @foreach($newsbycat as $item)
                 <div class="sec-topic col-sm-16 wow fadeInDown animated " data-wow-delay="0.5s">
                 <div class="row">
-                    <div class="col-sm-16"> <a href="#">
+                    <div class="col-sm-16"> <a>
                     <div class="sec-info">
                         <h3>
                           @php
@@ -69,6 +69,9 @@
                 </div>
             @endforeach
             
+          </div>
+          <div class="text-center">
+            {{ $newsbycat->links() }}
           </div>
         </div>
         <!-- left sec end --> 

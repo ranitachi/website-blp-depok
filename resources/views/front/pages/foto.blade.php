@@ -40,8 +40,11 @@
                     </a> 
                 </div>
             @endforeach
-              
+            
             </div>
+          </div>
+          <div class="text-center">
+            {{ $photo->links() }}
           </div>
         </div>
         <!-- left sec end --> 

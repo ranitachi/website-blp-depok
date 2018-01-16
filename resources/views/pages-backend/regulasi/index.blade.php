@@ -212,9 +212,7 @@
                 });
             });
         }
-        $(".view").click(function(){
-            var path = $(this).data('value')
-            $('#pdf-embed').attr('src', "{{url('/')}}/"+path)
-        })
+
+        
     </script>
 @endsection
