@@ -11,7 +11,7 @@ class SearchBeritaController extends Controller
     public function result(Request $request)
     {
         $getlatestnews = Berita::orderby('created_at', 'desc')->limit(10)->get();
-        $getpopularnews = Berita::orderby('view')->limit(5)->get();
+        $getpopularnews = Berita::orderby('view', 'desc')->limit(5)->get();
 
         $getresult = Berita::where('title', 'like', "%$request->keyword%")->paginate(2);
         

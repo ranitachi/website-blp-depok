@@ -14,7 +14,7 @@ class FrontBeritaByKatController extends Controller
     public function index($id)
     {
         $getlatestnews = Berita::orderby('created_at', 'desc')->limit(10)->get();
-        $getpopularnews = Berita::orderby('view')->limit(5)->get();
+        $getpopularnews = Berita::orderby('view', 'desc')->limit(5)->get();
         $getnewsbycat = Berita::where('id_kategori', $id)->with('kategori')->paginate(5);
 
         return view('front.pages.newsbycategories')
