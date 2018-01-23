@@ -272,7 +272,7 @@
             </div>
             <hr>
           </div>
-          <div class="col-sm-16 wow fadeInUp animated " data-wow-delay="0.5s" data-wow-offset="100">
+          {{--  <div class="col-sm-16 wow fadeInUp animated " data-wow-delay="0.5s" data-wow-offset="100">
             <div class="main-title-outer pull-left">
               <div class="main-title">Manual SI-MANDA PBJ</div>
             </div>
@@ -286,7 +286,7 @@
               </div>
             </div>
             <hr>
-          </div>
+          </div>  --}}
 
         </div>
       </div>
