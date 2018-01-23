@@ -81,6 +81,7 @@
     <script src="{{asset('/vendor/laravel-filemanager/js/lfm.js')}}"></script>
     <script>
         $(document).ready(function(){
+           // alert(APP_URL);
             $('#lfm').filemanager('image', {prefix: APP_URL+'/laravel-filemanager'});
             var options = {
                 filebrowserImageBrowseUrl: APP_URL+'/laravel-filemanager?type=Images',

@@ -12,7 +12,7 @@ class FrontKontakLembagaController extends Controller
     public function index()
     {
         $getlatestnews = Berita::orderby('created_at', 'desc')->limit(10)->get();
-        $getpopularnews = Berita::orderby('view')->limit(5)->get();
+        $getpopularnews = Berita::orderby('view', 'desc')->limit(5)->get();
         $getcontact = Kontak::first(); 
 
         return view('front.pages.kontak')
