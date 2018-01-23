@@ -11,7 +11,7 @@ class FrontBeritaController extends Controller
     public function index($id)
     {
         $getlatestnews = Berita::orderby('created_at', 'desc')->limit(10)->get();
-        $getpopularnews = Berita::orderby('view')->limit(5)->get();
+        $getpopularnews = Berita::orderby('view', 'desc')->limit(5)->get();
         
         $getnewsdetail = Berita::find($id);
         $getnewsdetail->view = $getnewsdetail->view + 1;

@@ -14,8 +14,8 @@ class FrontFotoController extends Controller
     public function index()
     {
         $getlatestnews = Berita::orderby('created_at', 'desc')->limit(10)->get();
-        $getpopularnews = Berita::orderby('view')->limit(5)->get();
-        $getphoto = Foto::all();
+        $getpopularnews = Berita::orderby('view', 'desc')->limit(5)->get();
+        $getphoto = Foto::paginate(10);
 
         return view('front.pages.foto')
             ->with('photo', $getphoto)

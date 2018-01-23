@@ -39,7 +39,7 @@
                       </h4>
                       <div class="f-sub-info">
                         <div class="time"><span class="ion-android-data icon"></span>{{ \Carbon\Carbon::parse($item->created_at)->toFormattedDateString() }}</div>
-                        <div class="comments"><span class="ion-chatbubbles icon"></span>{{$item->view}}</div>
+                        <div class="comments"><span class="ion-eye icon"></span>{{$item->view}}</div>
                       </div>
                     </div>
                   </div>
@@ -72,7 +72,7 @@
                       </h4>
                       <div class="f-sub-info">
                         <div class="time"><span class="ion-android-data icon"></span>{{ \Carbon\Carbon::parse($item->created_at)->toFormattedDateString() }}</div>
-                        <div class="comments"><span class="ion-chatbubbles icon"></span>{{$item->view}}</div>
+                        <div class="comments"><span class="ion-eye icon"></span>{{$item->view}}</div>
                       </div>
                     </div>
                   </div>
@@ -89,9 +89,12 @@
         <div class="row">
           <div class="col-sm-16 f-social  wow fadeInDown animated" data-wow-delay="1s" data-wow-offset="10">
             <ul class="list-inline">
-              <li> <a href="#"><span class="ion-social-twitter"></span></a> </li>
-              <li> <a href="#"><span class="ion-social-facebook"></span></a> </li>
-              <li> <a href="#"><span class="ion-social-instagram"></span></a> </li>
+              @php
+                $kontak = \App\Model\Kontak::first();
+              @endphp
+              <li> <a href="http://{{ $kontak->twitter }}" target="_blank"><span class="ion-social-twitter"></span></a> </li>
+              <li> <a href="http://{{ $kontak->twitter }}" target="_blank"><span class="ion-social-facebook"></span></a> </li>
+              <li> <a href="http://{{ $kontak->twitter }}" target="_blank"><span class="ion-social-instagram"></span></a> </li>
             </ul>
           </div>
         </div>

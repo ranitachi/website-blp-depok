@@ -78,6 +78,6 @@ Route::get('/kontak-lembaga', 'FrontKontakLembagaController@index')->name('front
 Route::get('/data-regulasi', 'FrontRegulasiController@index')->name('front.regulasi');
 Route::get('/adddownload/{id}', 'FrontRegulasiController@adddownload')->name('front.adddownload');
 Route::get('/detail-berita/{id}', 'FrontBeritaController@index')->name('front.berita');
-Route::post('/search', 'SearchBeritaController@result')->name('search.result');
+Route::get('/search', 'SearchBeritaController@result')->name('search.result');
 
 // -------------- FRONT END

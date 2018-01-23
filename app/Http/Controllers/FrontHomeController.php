@@ -17,7 +17,7 @@ class FrontHomeController extends Controller
     {
         Visitor::log();
         $getlatestnews = Berita::orderby('created_at', 'desc')->limit(10)->get();
-        $getpopularnews = Berita::orderby('view')->limit(5)->get();
+        $getpopularnews = Berita::orderby('view', 'desc')->limit(5)->get();
         $getfeaturedcategories = Kategori::where('diutamakan', '1')->orderby('updated_at', 'desc')->limit(2)->get();
         $getslider = Slider::orderby('created_at', 'desc')->limit(5)->get();
         $getwebrekanan = WebRekanan::orderby('created_at', 'desc')->limit(5)->get();
