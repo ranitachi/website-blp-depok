@@ -2,6 +2,7 @@
 /public/hot
 /public/storage
 /public/upload
+/public/files
 /storage/*.key
 /storage/geo/*.mmdb
 /vendor
