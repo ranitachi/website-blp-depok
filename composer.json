@@ -6,6 +6,7 @@
     "type": "project",
     "require": {
         "php": ">=7.0.0",
+        "bepsvpt/secure-headers": "^5.2",
         "cyrildewit/laravel-page-visits-counter": "^0.1.7",
         "fideloper/proxy": "^3.3",
         "kryptonit3/counter": "5.2.*",
