@@ -15,15 +15,15 @@
 
   <title>{{ trans('laravel-filemanager::lfm.title-page') }}</title>
   <link rel="shortcut icon" type="image/png" href="{{ asset('vendor/laravel-filemanager/img/folder.png') }}">
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{{ asset('vendor/laravel-filemanager/css/bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{ asset('vendor/laravel-filemanager/css/font-awesome.min.css')}}">
   <link rel="stylesheet" href="{{ asset('vendor/laravel-filemanager/css/cropper.min.css') }}">
   <style>{!! \File::get(base_path('vendor/unisharp/laravel-filemanager/public/css/lfm.css')) !!}</style>
   {{-- Use the line below instead of the above if you need to cache the css. --}}
   {{-- <link rel="stylesheet" href="{{ asset('/vendor/laravel-filemanager/css/lfm.css') }}"> --}}
   <link rel="stylesheet" href="{{ asset('vendor/laravel-filemanager/css/mfb.css') }}">
   <link rel="stylesheet" href="{{ asset('vendor/laravel-filemanager/css/dropzone.min.css') }}">
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.css">
+  <link rel="stylesheet" href="{{ asset('vendor/laravel-filemanager/css/jquery-ui.min.css')}}">
 </head>
 <body>
   <div class="container-fluid" id="wrapper">
@@ -146,10 +146,10 @@
     <img src="{{asset('vendor/laravel-filemanager/img/loader.svg')}}">
   </div>
 
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+  <script src="{{ asset('vendor/laravel-filemanager/js/jquery.js')}}"></script>
+  <script src="{{ asset('vendor/laravel-filemanager/js/bootstrap.js')}}"></script>
+  <script src="{{ asset('vendor/laravel-filemanager/js/bootbox.js')}}"></script>
+  <script src="{{ asset('vendor/laravel-filemanager/js/jqueryui.js')}}"></script>
   <script src="{{ asset('vendor/laravel-filemanager/js/cropper.min.js') }}"></script>
   <script src="{{ asset('vendor/laravel-filemanager/js/jquery.form.min.js') }}"></script>
   <script src="{{ asset('vendor/laravel-filemanager/js/dropzone.min.js') }}"></script>
