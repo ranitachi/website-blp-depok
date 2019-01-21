@@ -1,7 +1,7 @@
 @extends('front.layouts.master')
 
 @section('title')
-    <title>Kontak Kami - Unit Layanan Pengadaan Pemerintah Kota Depok</title>
+    <title>Kontak Kami - Bagian Pengadaan Barang/Jasa Pemerintah Kota Depok</title>
     <style>
         #gmap_canvas img{max-width:none!important;background:none!important}
     </style>

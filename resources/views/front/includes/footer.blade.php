@@ -5,7 +5,7 @@
           <div class="col-sm-6 subscribe-info wow fadeInDown animated" data-wow-delay="1s" data-wow-offset="40">
             <div class="row">
               <div class="col-sm-16">
-                <div class="f-title">Unit Layanan Pengadaan Pemerintah Daerah Kota Depok</div>
+                <div class="f-title">Bagian Pengadaan Barang/Jasa Pemerintah Daerah Kota Depok</div>
                 <p>
                 ULP adalah unit lembaga pemerintahan yang berfungsi melaksanakan pengadaan barang/jasa yang bersifat permanen, dapat berdiri sendiri atau melekat pada unit yang sudah ada.
                 </p>

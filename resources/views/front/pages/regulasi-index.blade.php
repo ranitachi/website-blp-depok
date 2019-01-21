@@ -1,7 +1,7 @@
 @extends('front.layouts.master')
 
 @section('title')
-  <title>Data Regulasi - Unit Layanan Pengadaan Pemerintah Kota Depok</title>
+  <title>Data Regulasi - Bagian Pengadaan Barang/Jasa Pemerintah Kota Depok</title>
 @endsection
 @section('content')
 

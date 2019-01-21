@@ -1,7 +1,7 @@
 @extends('front.layouts.master')
 
 @section('title')
-  <title>Visi Misi - Unit Layanan Pengadaan Pemerintah Kota Depok</title>
+  <title>Visi Misi - Bagian Pengadaan Barang/Jasa Pemerintah Kota Depok</title>
 @endsection
 @section('content')
 @php
